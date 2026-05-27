@@ -24,11 +24,11 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap items-center gap-4">
-            <button className="bg-[#FCDFD3] hover:bg-[#ebd0c4] text-[#2C1A14] px-6 py-3 text-xs md:text-sm font-semibold tracking-wider transition-colors duration-200 rounded-sm shadow-md">
+            <button className="bg-[#2C1A19] hover:bg-[#ebd0c4] text-[#FCDFD3] hover:text-[#2c1a19] px-6 py-3 text-xs md:text-sm font-semibold tracking-wider transition-colors duration-200 rounded-[10px] shadow-md">
               Get Involved
             </button>
             
-            <button className="border border-white/40 bg-black/10 hover:bg-white/10 hover:border-white text-white px-6 py-3 text-xs md:text-sm font-medium tracking-wider transition-all duration-200 rounded-sm backdrop-blur-xs">
+            <button className="border border-white/40 bg-black/10 hover:bg-white/10 hover:border-white text-white px-6 py-3 text-xs md:text-sm font-medium tracking-wider transition-all duration-200 rounded-[10px] backdrop-blur-xs">
               About Us
             </button>
           </div>
