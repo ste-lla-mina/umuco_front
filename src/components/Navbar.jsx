@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Globe } from 'lucide-react';
 function Navbar() {
   const [activeTab, setActiveTab] = useState('Home');
 
@@ -39,7 +39,7 @@ function Navbar() {
 
         <div className="flex items-center space-x-6">
           <button className="text-sm font-semibold text-[#6F5B55] hover:text-[#8D493A] transition-colors tracking-wide">
-            KN
+            <Globe size={18} />
           </button>
 
           <button className="text-sm font-medium text-[#8D493A] hover:text-[#3E2723] transition-colors">
