@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
-
-export default function Navbar() {
+function Navbar() {
   const [activeTab, setActiveTab] = useState('Home');
 
   const navItems = ['Home', 'About', 'Community'];
@@ -57,3 +56,4 @@ export default function Navbar() {
     </header>
   );
 }
+export default Navbar;
