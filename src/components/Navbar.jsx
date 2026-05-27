@@ -6,7 +6,7 @@ function Navbar() {
   const navItems = ['Home', 'About', 'Community'];
 
   return (
-    <header className="w-full bg-[#FDFBF7] border-b border-[#EADBC8] px-6 py-4 font-sans shadow-sm">
+    <header className="w-full bg-[#FDFBF7] border-b border-[#EADBC8] px-6 py-2 font-sans shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         
         <div className="flex items-center space-x-3 cursor-pointer">
