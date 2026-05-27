@@ -24,7 +24,7 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap items-center gap-4">
-            <button className="bg-[#2C1A19] hover:bg-[#ebd0c4] text-[#FCDFD3] hover:text-[#2c1a19] px-6 py-3 text-xs md:text-sm font-semibold tracking-wider transition-colors duration-200 rounded-[10px] shadow-md">
+            <button className="bg-[#3E2723] hover:bg-[#2C1A19] text-[#FCDFD3] px-6 py-3 text-xs md:text-sm font-semibold tracking-wider transition-colors duration-200 rounded-[10px] shadow-md">
               Get Involved
             </button>
             
