@@ -38,7 +38,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         <div className="lg:col-span-7 flex flex-col items-start text-left">
-          <div className="inline-flex items-center space-x-2 bg-[#FCDFD3]/40 border border-[#EADBC8] rounded-full px-4 py-1.5 mb-6">
+          <div className="inline-flex items-center space-x-2 bg-[#FCDFD3]/40 border border-[#EADBC8] rounded-full px-4 py-0 mb-6">
             <Milestone className="w-3.5 h-3.5 text-[#8D493A]" />
             <span className="text-xxs md:text-xs font-semibold tracking-widest text-[#6F5B55] uppercase">
               DIGITALIZING HERITAGE
