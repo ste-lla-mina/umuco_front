@@ -24,13 +24,13 @@ function Navbar() {
                 onClick={() => setActiveTab(item)}
                 className={`relative pb-2 transition-colors duration-200 ${
                   isActive 
-                    ? 'text-[#65350f] font-semibold' 
+                    ? 'text-[#8D493A] font-semibold' 
                     : 'text-[#6F5B55] hover:text-[#8D493A]'
                 }`}
               >
                 {item}
                 {isActive && (
-                  <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#65350f] animate-fadeIn" />
+                  <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#8D493A] animate-fadeIn" />
                 )}
               </button>
             );
