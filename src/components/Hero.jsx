@@ -64,7 +64,7 @@ export default function Hero() {
           <div className="inline-flex items-center space-x-2 bg-[#FCDFD3]/40 border border-[#EADBC8] rounded-full px-4 py-1 mb-6">
             <Milestone className="w-3.5 h-3.5 text-[#8D493A]" />
             <span className="text-xxs md:text-xs font-semibold tracking-widest text-[#6F5B55] uppercase">
-              DIGITALIZING CULTURE
+              DIGITALIZING CULTURAL ACCESS.
             </span>
           </div>
 
@@ -75,7 +75,7 @@ export default function Hero() {
 
           <p className="text-sm md:text-base text-[#6F5B55] max-w-xl leading-relaxed mb-8 font-normal">
             Sustaining the nation's pulse by remembering our roots, carrying the spoken 
-            wisdom of our ancestors, and honoring the quiet strength of shared pact.
+            wisdom of our ancestors, and honoring the quiet strength of<br/> shared pact.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 w-full border-b border-[#EADBC8]/60 pb-12">
