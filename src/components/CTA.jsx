@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function StatsBanner() {
+function StatsBanner() {
   const stats = [
     { value: '10k+', label: 'DIGITAL ARTIFACTS' },
     { value: '500+', label: 'ORAL TESTIMONIES' },
@@ -31,3 +31,4 @@ export default function StatsBanner() {
     </section>
   );
 }
+export default StatsBanner;
