@@ -57,10 +57,10 @@ export default function Hero() {
   ];
 
   return (
-    <section className="w-full bg-[#FDFBF7] font-sans px-6 py-12 md:py-20 overflow-hidden">
+    <section className="w-full bg-[#FDFBF7] font-sans px-6 py-12 md:py-12 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <div className="lg:col-span-6 flex flex-col items-start text-left">
+        <div className="lg:col-span-6 flex flex-col items-start text-left px-6">
           <div className="inline-flex items-center space-x-2 bg-[#FCDFD3]/40 border border-[#EADBC8] rounded-full px-4 py-1 mb-6">
             <Milestone className="w-3.5 h-3.5 text-[#8D493A]" />
             <span className="text-xxs md:text-xs font-semibold tracking-widest text-[#6F5B55] uppercase">
@@ -69,7 +69,7 @@ export default function Hero() {
           </div>
 
           <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#2C1A14] leading-[1.1] mb-6">
-            The Sanctuary of the<br/> shared
+            The Sanctuary of <br/> shared
             <span className="text-[#8D493A]"> Heritage.</span>
           </h1>
 
