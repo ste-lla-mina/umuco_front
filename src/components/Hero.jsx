@@ -46,13 +46,13 @@ export default function Hero() {
           </div>
 
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#2C1A14] leading-[1.1] mb-6">
-            Preserving Rwanda's <br />
-            <span className="italic font-normal text-[#8D493A]">Culture</span> Through <br />
-            Technology.
+            The Sanctuary of<br/> Our
+            <span className="italic font-normal text-[#8D493A]"> Heritage.</span> 
           </h1>
 
           <p className="text-sm md:text-base text-[#6F5B55] max-w-xl leading-relaxed mb-8 font-normal">
-            Unlock the wisdom of the hills. Journey through interactive proverbs, language modules, and historical archives designed for the digital age. Experience the heartbeat of Rwanda, anywhere.
+             Sustaining the nation's pulse by remembering our roots, carrying the spoken 
+            wisdom of our ancestors, and honoring the quiet strength of shared pact.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 w-full border-b border-[#EADBC8]/60 pb-12">
