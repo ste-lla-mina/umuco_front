@@ -38,15 +38,15 @@ function Navbar() {
         </nav>
 
         <div className="flex items-center space-x-6">
-          <button className="text-sm font-semibold text-[#6F5B55] hover:text-[#8D493A] transition-colors tracking-wide">
+          <button className="text-sm font-semibold text-[#8D493A] hover:text-[#6f5b55] transition-colors tracking-wide">
             <Globe size={18} />
           </button>
 
-          <button className="text-sm font-medium text-[#65350f] hover:text-[#3E2723] transition-colors">
+          <button className="text-sm font-medium text-[#8D493A] hover:text-[#6f5b55] transition-colors">
             Login
           </button>
 
-          <button className="flex items-center space-x-2 bg-[#65350f] hover:bg-[#3E2723] text-[#FDFBF7] px-5 py-2 text-sm font-medium tracking-wide transition-all rounded-[25px] shadow-sm group">
+          <button className="flex items-center space-x-2 bg-[#8D493A] hover:bg-[#6f5b55] text-[#FDFBF7] px-5 py-2 text-sm font-medium tracking-wide transition-all rounded-[25px] shadow-sm group">
             <span>Join</span>
             <ArrowRight className="w-4 h-4 transform transition-transform group-hover:translate-x-1" />
           </button>
