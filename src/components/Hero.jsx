@@ -20,7 +20,7 @@ export default function Hero() {
           
           <p className="text-sm md:text-base text-gray-200/90 max-w-xl leading-relaxed tracking-wide mb-8 font-light">
             Sustaining the nation's pulse by remembering our roots, carrying the spoken 
-            wisdom of our ancestors, and honoring the quiet strength of a shared pact.
+            wisdom of our ancestors, and honoring the quiet strength of shared pact.
           </p>
 
           <div className="flex flex-wrap items-center gap-4">
