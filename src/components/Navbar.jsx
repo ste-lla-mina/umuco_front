@@ -30,7 +30,7 @@ function Navbar() {
               >
                 {item}
                 {isActive && (
-                  <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#8D493A] animate-fadeIn" />
+                  <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#65350f] animate-fadeIn" />
                 )}
               </button>
             );
