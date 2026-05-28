@@ -41,13 +41,13 @@ export default function Hero() {
           <div className="inline-flex items-center space-x-2 bg-[#FCDFD3]/40 border border-[#EADBC8] rounded-full px-4 py-0 mb-6">
             <Milestone className="w-3.5 h-3.5 text-[#8D493A]" />
             <span className="text-xxs md:text-xs font-semibold tracking-widest text-[#6F5B55] uppercase">
-              DIGITALIZING HERITAGE
+              DIGITALIZING CULTURE
             </span>
           </div>
 
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#2C1A14] leading-[1.1] mb-6">
+          <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#2C1A14] leading-[1.1] mb-6">
             The Sanctuary of<br/> Our
-            <span className="italic font-normal text-[#8D493A]"> Heritage.</span> 
+            <span className="font-sans text-[#8D493A]"> Heritage.</span> 
           </h1>
 
           <p className="text-sm md:text-base text-[#6F5B55] max-w-xl leading-relaxed mb-8 font-normal">
