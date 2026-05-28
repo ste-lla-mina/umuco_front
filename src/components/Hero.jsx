@@ -29,23 +29,25 @@ export default function Hero() {
 
   const features = [
     {
-      title: 'Explore Traditions',
-      desc: 'Immerse yourself in oral histories, rhythmic drums, and the art',
-      img: cardImg1,
-      icon: Compass
+      title: 'Connect & Share',
+      desc: 'Join a global community dedicated to keeping Rwandan culture.',
+      img: cardImg3,
+      icon: Users
     },
+    
     {
       title: 'Learn Kinyarwanda',
-      desc: 'Master the language of thousand hills with our smart interactive',
+      desc: 'Master the language of thousand hills with interactive means.',
       img: cardImg2,
       icon: BookOpen
     },
     {
-      title: 'Connect & Share',
-      desc: 'Join a global community dedicated to keeping Rwandan spirit...',
-      img: cardImg3,
-      icon: Users
+      title: 'Explore Traditions',
+      desc: 'Immerse yourself in oral histories, rhythmic drums, and the art.',
+      img: cardImg1,
+      icon: Compass
     }
+    
   ];
 
   const positions = [
