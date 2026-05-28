@@ -34,7 +34,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="w-full bg-[#FDFBF7] font-sans px-6 py-12 md:py-20">
+    <section className="w-full bg-[#FDFBF7] font-sans px-6 py-12 md:py-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         <div className="lg:col-span-7 flex flex-col items-start text-left">
