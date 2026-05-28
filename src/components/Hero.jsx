@@ -1,7 +1,7 @@
 import React from 'react';
 import heroBg from '../assets/download.png';
 
-export default function Hero() {
+function Hero() {
   return (
     <section className="relative min-h-[90vh] w-full flex items-center px-8 md:px-16 lg:px-24 overflow-hidden py-12">
       <div 
@@ -52,3 +52,4 @@ export default function Hero() {
     </section>
   );
 }
+export default Hero;
