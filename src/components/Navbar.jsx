@@ -10,7 +10,7 @@ function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         
         <div className="flex items-center space-x-3 cursor-pointer">
-          <span className="text-[20px] font-bold tracking-wide text-[#8D493A]">
+          <span className="text-[20px] font-bold tracking-wide text-[#65350f]">
             UmucoCore
           </span>
         </div>
@@ -24,7 +24,7 @@ function Navbar() {
                 onClick={() => setActiveTab(item)}
                 className={`relative pb-2 transition-colors duration-200 ${
                   isActive 
-                    ? 'text-[#8D493A] font-semibold' 
+                    ? 'text-[#65350f] font-semibold' 
                     : 'text-[#6F5B55] hover:text-[#8D493A]'
                 }`}
               >
@@ -42,11 +42,11 @@ function Navbar() {
             <Globe size={18} />
           </button>
 
-          <button className="text-sm font-medium text-[#8D493A] hover:text-[#3E2723] transition-colors">
+          <button className="text-sm font-medium text-[#65350f] hover:text-[#3E2723] transition-colors">
             Login
           </button>
 
-          <button className="flex items-center space-x-2 bg-[#8D493A] hover:bg-[#3E2723] text-[#FDFBF7] px-5 py-2 text-sm font-medium tracking-wide transition-all rounded-[25px] shadow-sm group">
+          <button className="flex items-center space-x-2 bg-[#65350f] hover:bg-[#3E2723] text-[#FDFBF7] px-5 py-2 text-sm font-medium tracking-wide transition-all rounded-[25px] shadow-sm group">
             <span>Join</span>
             <ArrowRight className="w-4 h-4 transform transition-transform group-hover:translate-x-1" />
           </button>
