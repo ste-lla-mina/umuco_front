@@ -57,13 +57,13 @@ export default function Hero() {
   ];
 
   return (
-    <section className="w-full bg-[#FDFBF7] font-sans px-6 py-12 md:py-12 overflow-hidden">
+    <section className="w-full bg-[#FDFBF7] font-sans px-6 py-12 md:py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         <div className="lg:col-span-6 flex flex-col items-start text-left px-6">
           <div className="inline-flex items-center space-x-2 bg-[#FCDFD3]/40 border border-[#EADBC8] rounded-full px-4 py-1 mb-6">
             <Milestone className="w-3.5 h-3.5 text-[#8D493A]" />
-            <span className="text-xxs md:text-xs font-semibold tracking-widest text-[#6F5B55] uppercase">
+            <span className="text-xxs md:text-xs font-semibold tracking-widest text-[#8D493A] uppercase">
               DIGITALIZING CULTURAL ACCESS.
             </span>
           </div>
@@ -84,7 +84,7 @@ export default function Hero() {
               <ArrowRight className="w-4 h-4 transform transition-transform group-hover:translate-x-1" />
             </button>
 
-            <button className="border border-[#6F5B55]/40 hover:bg-[#8D493A]/5 text-[#2C1A14] px-6 py-3.5 text-sm font-semibold tracking-wide transition-all duration-200 rounded-lg">
+            <button className="border border-[#8D493A]/40 hover:bg-[#8D493A]/5 text-[#8D493A] px-6 py-3.5 text-sm font-semibold tracking-wide transition-all duration-200 rounded-lg">
               Explore More
             </button>
           </div>
@@ -92,10 +92,10 @@ export default function Hero() {
           <div className="w-full pt-8 grid grid-cols-3 gap-4">
             {stats.map((stat, index) => (
               <div key={index} className="flex flex-col">
-                <span className="font-sans text-xl md:text-2xl font-bold text-[#2C1A14]">
+                <span className="font-sans text-xl md:text-2xl font-bold text-[#8D493A]">
                   {stat.value}
                 </span>
-                <span className="text-xxs md:text-xs text-[#6F5B55] tracking-wider font-semibold mt-1 uppercase">
+                <span className="text-xxs md:text-xs text-[#8D493A] tracking-wider font-semibold mt-1 uppercase">
                   {stat.label}
                 </span>
               </div>
