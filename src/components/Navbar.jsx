@@ -10,7 +10,7 @@ function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         
         <div className="flex items-center space-x-3 cursor-pointer">
-          <span className="text-[20px] font-bold tracking-wide text-[#65350f]">
+          <span className="text-[20px] font-bold tracking-wide text-[#8D493A]">
             UmucoCore
           </span>
         </div>
