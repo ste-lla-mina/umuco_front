@@ -67,7 +67,7 @@ export default function Hero() {
           </div>
 
           <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#2C1A14] leading-[1.1] mb-6">
-            The Sanctuary of<br /> Our
+            The Sanctuary of Our
             <span className="text-[#8D493A]"> Heritage.</span>
           </h1>
 
