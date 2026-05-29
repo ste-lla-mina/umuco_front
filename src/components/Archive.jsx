@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, History, Landmark, Music } from 'lucide-react';
 
-export default function DigitalArchive() {
+function DigitalArchive() {
   const collections = [
     {
       title: 'Oral History',
@@ -72,3 +72,4 @@ export default function DigitalArchive() {
     </section>
   );
 }
+export default Archive;
