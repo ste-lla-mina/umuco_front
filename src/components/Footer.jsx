@@ -1,7 +1,6 @@
 import React from 'react';
 import { Share2, MessageSquare } from 'lucide-react';
-
-export default function Footer() {
+function Footer() {
   return (
     <footer className="w-full bg-[#232321] text-white font-sans px-6 pt-16 pb-8 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
@@ -87,3 +86,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default Footer;
