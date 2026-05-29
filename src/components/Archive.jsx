@@ -26,7 +26,7 @@ export default function DigitalArchive() {
         
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-16">
           <div className="text-left max-w-xl">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#2C1A14] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#8D493A] mb-4">
               The Digital Archive
             </h2>
             <p className="text-sm md:text-base text-[#6F5B55] leading-relaxed font-normal">
