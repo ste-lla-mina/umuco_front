@@ -75,7 +75,7 @@ export default function Hero() {
 
           <p className="text-sm md:text-base text-[#6F5B55] max-w-xl leading-relaxed mb-8 font-normal">
             Sustaining the nation's pulse by remembering our roots, carrying the spoken 
-            wisdom of our ancestors, and honoring the quiet strength of<br/> shared pact.
+            wisdom of our ancestors, and honoring the quiet strength of<br/>our shared pact.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 w-full border-b border-[#EADBC8]/60 pb-12">
