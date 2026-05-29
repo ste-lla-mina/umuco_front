@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Mail, Lock, Eye, EyeOff, Milestone } from 'lucide-react';
 import authLeftBg from '../assets/download.jpg';
 
-export default function AuthPage() {
+function AuthPage() {
   const [isSignUp, setIsSignUp] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
@@ -223,3 +223,4 @@ export default function AuthPage() {
     </section>
   );
 }
+export default AuthPage;
