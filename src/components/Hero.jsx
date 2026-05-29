@@ -68,7 +68,7 @@ function Hero() {
           </div>
 
           <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#2C1A14] leading-[1.1] mb-6">
-            The Sanctuary of <br/> shared
+            The Sanctuary of <br/> Our
             <span className="text-[#8D493A]"> Heritage.</span>
           </h1>
 
@@ -88,6 +88,18 @@ function Hero() {
             </button>
           </div>
 
+          <div className="w-full pt-8 grid grid-cols-3 gap-4">
+            {stats.map((stat, index) => (
+              <div key={index} className="flex flex-col">
+                <span className="font-sans text-xl md:text-2xl font-bold text-[#8D493A]">
+                  {stat.value}
+                </span>
+                <span className="text-xxs md:text-xs text-[#8D493A] tracking-wider font-semibold mt-1 uppercase">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="lg:col-span-6 relative h-[520px] w-full flex items-start justify-center lg:justify-start lg:pl-12 mt-8 lg:mt-0">
