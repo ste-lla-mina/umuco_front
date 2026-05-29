@@ -4,8 +4,7 @@ import { ArrowRight, Compass, BookOpen, Users, Milestone } from 'lucide-react';
 import cardImg1 from '../assets/tradi.jpg';
 import cardImg2 from '../assets/book.png';
 import cardImg3 from '../assets/conne.jpg';
-
-export default function Hero() {
+function Hero() {
   const [order, setOrder] = useState([0, 1, 2]);
 
   useEffect(() => {
@@ -143,3 +142,5 @@ export default function Hero() {
     </section>
   );
 }
+
+export default Hero;
