@@ -22,7 +22,7 @@ export default function Hero() {
   }, []);
 
   const stats = [
-    { value: '1,000+', label: 'ORAL STORIES' },
+    { value: '500+', label: 'ORAL STORIES' },
     { value: '50+', label: 'LANGUAGE MODULES' },
     { value: '24/7', label: 'AI ASSISTANT' }
   ];
@@ -74,8 +74,8 @@ export default function Hero() {
           </h1>
 
           <p className="text-sm md:text-base text-[#6F5B55] max-w-xl leading-relaxed mb-8 font-normal">
-            Sustaining the nation's pulse by remembering our roots, carrying the spoken 
-            wisdom of our ancestors, and honoring the quiet strength of<br/>our shared pact.
+            Sustaining the nation's pulse by keeping our roots, carrying the<br/> spoken 
+            wisdom of our ancestors, for our shared pact.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 w-full border-b border-[#EADBC8]/60 pb-12">
