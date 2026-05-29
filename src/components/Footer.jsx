@@ -75,7 +75,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#A39E93]/60 font-normal">
-          <p>© 2024 Umuco Hub. Preserving heritage digitally for future generations.</p>
+          <p>© 2026 Umuco Hub. Preserving heritage digitally for future generations.</p>
           <div className="flex items-center space-x-6">
             <a href="#" className="hover:text-white transition-colors duration-200">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors duration-200">Terms of Use</a>
