@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Lock, Eye, EyeOff, Milestone } from 'lucide-react';
-import authLeftBg from '../assets/download.jpg';
+import authLeftBg from '../assets/download.png';
 
 function AuthPage() {
   const [isSignUp, setIsSignUp] = useState(false);
