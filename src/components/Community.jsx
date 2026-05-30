@@ -1,6 +1,6 @@
 import React from 'react';
 import { Quote, FilePlus, ShieldAlert } from 'lucide-react';
-import joinImg from '../assets/iraba.jpg'; 
+import joinImg from '../assets/tra.png'; 
 export default function CommunityGuardian() {
   return (
     <div className="w-full bg-[#FDFBF7] font-sans">
