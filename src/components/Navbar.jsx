@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, Globe } from 'lucide-react';
 
-function Navbar() {
+function Navbar({ onNavigate }) {
   const [activeTab, setActiveTab] = useState('Home');
   const [currentLang, setCurrentLang] = useState('EN');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -21,7 +21,7 @@ function Navbar() {
     <header className="w-full bg-[#FDFBF7]/90 backdrop-blur-md border-b border-[#EADBC8] px-6 py-2 font-sans shadow-sm fixed top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         
-        <div className="flex items-center space-x-3 cursor-pointer">
+        <div onClick={() => onNavigate('home')} className="flex items-center space-x-3 cursor-pointer">
           <span className="text-[20px] font-bold tracking-wide text-[#8D493A]">
             UmucoCore
           </span>
@@ -81,11 +81,17 @@ function Navbar() {
             )}
           </div>
 
-          <button className="text-sm font-medium text-[#8D493A] hover:text-[#6f5b55] transition-colors">
+          <button 
+            onClick={() => onNavigate('login')}
+            className="text-sm font-medium text-[#8D493A] hover:text-[#6f5b55] transition-colors"
+          >
             Login
           </button>
 
-          <button className="flex items-center space-x-2 bg-[#8D493A] hover:bg-[#6f5b55] text-[#FDFBF7] px-5 py-2 text-sm font-medium tracking-wide transition-all rounded-[25px] shadow-sm group">
+          <button 
+            onClick={() => onNavigate('signup')}
+            className="flex items-center space-x-2 bg-[#8D493A] hover:bg-[#6f5b55] text-[#FDFBF7] px-5 py-2 text-sm font-medium tracking-wide transition-all rounded-[25px] shadow-sm group"
+          >
             <span>Join</span>
             <ArrowRight className="w-4 h-4 transform transition-transform group-hover:translate-x-1" />
           </button>
