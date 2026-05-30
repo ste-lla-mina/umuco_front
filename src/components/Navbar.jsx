@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { ArrowRight, Globe } from 'lucide-react';
+
 function Navbar() {
   const [activeTab, setActiveTab] = useState('Home');
 
-  const navItems = ['Home', 'About', 'Community'];
+  const navItems = [
+    { label: 'Home', id: '#' },
+    { label: 'About', id: '#archive' },
+    { label: 'Community', id: '#community' }
+  ];
 
   return (
-    <header className="w-full bg-[#FDFBF7] border-b border-[#EADBC8] px-6 py-2 font-sans shadow-sm">
+    <header className="w-full bg-[#FDFBF7]/90 backdrop-blur-md border-b border-[#EADBC8] px-6 py-2 font-sans shadow-sm fixed top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         
         <div className="flex items-center space-x-3 cursor-pointer">
@@ -17,22 +22,23 @@ function Navbar() {
 
         <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
           {navItems.map((item) => {
-            const isActive = activeTab === item;
+            const isActive = activeTab === item.label;
             return (
-              <button
-                key={item}
-                onClick={() => setActiveTab(item)}
+              <a
+                key={item.label}
+                href={item.id}
+                onClick={() => setActiveTab(item.label)}
                 className={`relative pb-2 transition-colors duration-200 ${
                   isActive 
                     ? 'text-[#8D493A] font-semibold' 
                     : 'text-[#6F5B55] hover:text-[#8D493A]'
                 }`}
               >
-                {item}
+                {item.label}
                 {isActive && (
                   <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#8D493A] animate-fadeIn" />
                 )}
-              </button>
+              </a>
             );
           })}
         </nav>
@@ -56,4 +62,5 @@ function Navbar() {
     </header>
   );
 }
+
 export default Navbar;
