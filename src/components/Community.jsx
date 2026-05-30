@@ -10,7 +10,7 @@ export default function CommunityGuardian() {
             <Quote className="w-12 h-12 fill-current" />
           </div>
           
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#2C1A14] tracking-tight mb-4">
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#8D493A] tracking-tight mb-4">
             "Abari bose si ko bameze."
           </h2>
           
@@ -22,15 +22,15 @@ export default function CommunityGuardian() {
             Explore the deep wisdom of Rwandan proverbs.
           </p>
           
-          <button className="bg-[#2C1A14] hover:bg-[#3E2723] text-[#FDFBF7] px-6 py-3 text-xs md:text-sm font-semibold tracking-wide rounded-xl transition-all duration-200 shadow-sm">
+          <button className="bg-[#8D493A] hover:bg-[#3E2723] text-[#FDFBF7] px-6 py-3 text-xs md:text-sm font-semibold tracking-wide rounded-xl transition-all duration-200 shadow-sm">
             Discover More Proverbs
           </button>
         </div>
       </section>
 
       <section className="w-full px-6 pb-20 md:pb-28">
-        <div className="max-w-7xl mx-auto rounded-3xl overflow-hidden bg-[#3E2319] text-white grid grid-cols-1 lg:grid-cols-12 min-h-[460px] shadow-xl">
-          <div className="lg:col-span-6 p-8 md:p-12 lg:p-16 flex flex-col justify-center items-start text-left bg-gradient-to-br from-[#3E2319] to-[#2C1A14]">
+        <div className="max-w-7xl mx-auto rounded-3xl overflow-hidden bg-[#8D493A] text-white grid grid-cols-1 lg:grid-cols-12 min-h-[460px] shadow-xl">
+          <div className="lg:col-span-6 p-8 md:p-12 lg:p-16 flex flex-col justify-center items-start text-left bg-[#8D4930]">
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.15] text-[#FDFBF7] mb-6">
               Become a Cultural <br />Guardian.
             </h2>
