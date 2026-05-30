@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Lock, Eye, EyeOff, User, Milestone } from 'lucide-react';
-import authLeftBg from '../assets/download.png';
+import authLeftBg from '../assets/tra.png';
 
 export default function SignUpPage({ onNavigate }) {
   const [showPassword, setShowPassword] = useState(false);
@@ -53,7 +53,7 @@ export default function SignUpPage({ onNavigate }) {
           </p>
 
           <div className="mt-12 flex items-center space-x-3 text-xxs font-semibold tracking-widest text-white/40 ">
-            <span>Preserving Rwandan Nature and Roots.</span>
+            <span>Preserving Rwandan Roots and Culture.</span>
           </div>
         </div>
       </div>
