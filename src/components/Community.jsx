@@ -4,7 +4,7 @@ import joinImg from '../assets/iraba.jpg';
 export default function CommunityGuardian() {
   return (
     <div className="w-full bg-[#FDFBF7] font-sans">
-      <section className="w-full px-6 py-20 md:py-28 text-center bg-[#FDFBF7]">
+      <section className="w-full px-6 py-20 md:py-20 text-center bg-[#FDFBF7] border-t border-[#EADBC8]/40">
         <div className="max-w-4xl mx-auto flex flex-col items-center">
           <div className="text-[#8D493A]/30 mb-4">
             <Quote className="w-12 h-12 fill-current" />
