@@ -1,11 +1,9 @@
 import React from 'react';
 import { Quote, FilePlus, ShieldAlert } from 'lucide-react';
-import studioImg from '../assets/iraba.jpg'; 
+import joinImg from '../assets/iraba.jpg'; 
 export default function CommunityGuardian() {
   return (
     <div className="w-full bg-[#FDFBF7] font-sans">
-      
-      {/* --- SECTION 1: PROVERBS SHOWCASE --- */}
       <section className="w-full px-6 py-20 md:py-28 text-center bg-[#FDFBF7]">
         <div className="max-w-4xl mx-auto flex flex-col items-center">
           <div className="text-[#8D493A]/30 mb-4">
@@ -30,11 +28,8 @@ export default function CommunityGuardian() {
         </div>
       </section>
 
-      {/* --- SECTION 2: CULTURAL GUARDIAN BANNER --- */}
       <section className="w-full px-6 pb-20 md:pb-28">
         <div className="max-w-7xl mx-auto rounded-3xl overflow-hidden bg-[#3E2319] text-white grid grid-cols-1 lg:grid-cols-12 min-h-[460px] shadow-xl">
-          
-          {/* Left Text Content Grid Panel */}
           <div className="lg:col-span-6 p-8 md:p-12 lg:p-16 flex flex-col justify-center items-start text-left bg-gradient-to-br from-[#3E2319] to-[#2C1A14]">
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.15] text-[#FDFBF7] mb-6">
               Become a Cultural <br />Guardian.
@@ -58,15 +53,12 @@ export default function CommunityGuardian() {
               </button>
             </div>
           </div>
-
-          {/* Right Image Grid Panel */}
           <div className="lg:col-span-6 relative w-full h-64 lg:h-auto min-h-[300px]">
             <img 
-              src={studioImg} 
+              src={joinImg} 
               alt="Rwandan Audio Archive Workstation Studio" 
               className="absolute inset-0 w-full h-full object-cover object-center"
             />
-            {/* Soft overlay matching the theme profile palette colors to unify style */}
             <div className="absolute inset-0 bg-[#3E2319]/10 blend-multiply" />
           </div>
 
