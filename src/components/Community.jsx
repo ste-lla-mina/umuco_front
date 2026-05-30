@@ -1,9 +1,10 @@
 import React from 'react';
 import { Quote, FilePlus, ShieldAlert } from 'lucide-react';
 import joinImg from '../assets/tra.png'; 
+
 function CommunityGuardian() {
   return (
-    <div className="w-full bg-[#FDFBF7] font-sans">
+    <div className="w-full bg-[#FDFBF7] font-sans scroll-mt-24">
       <section className="w-full px-6 py-20 md:py-20 text-center bg-[#FDFBF7] border-t border-[#EADBC8]/40">
         <div className="max-w-4xl mx-auto flex flex-col items-center">
           <div className="text-[#8D493A]/30 mb-4">
@@ -11,7 +12,7 @@ function CommunityGuardian() {
           </div>
           
           <h2 className="font-serif text-[16px] md:text-4xl lg:text-5xl font-bold text-[#8D493A] tracking-tight mb-4">
-          "Ababiri baruta umwe."
+            "Ababiri baruta umwe."
           </h2>
           
           <p className="text-base md:text-lg font-medium text-[#8D493A] tracking-wide mb-3">
@@ -68,4 +69,5 @@ function CommunityGuardian() {
     </div>
   );
 }
+
 export default CommunityGuardian;
