@@ -29,8 +29,8 @@ export default function CommunityGuardian() {
       </section>
 
       <section className="w-full px-6 pb-20 md:pb-28">
-        <div className="max-w-7xl mx-auto rounded-3xl overflow-hidden bg-[#8D493A] text-white grid grid-cols-1 lg:grid-cols-12 min-h-[460px] shadow-xl">
-          <div className="lg:col-span-6 p-8 md:p-12 lg:p-16 flex flex-col justify-center items-start text-left bg-[#8D4930]">
+        <div className="max-w-7xl mx-auto rounded-3xl overflow-hidden bg-[#8B452B] text-white grid grid-cols-1 lg:grid-cols-12 min-h-[460px] shadow-xl">
+          <div className="lg:col-span-6 p-8 md:p-12 lg:p-16 flex flex-col justify-center items-start text-left bg-[#8B452B]">
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.15] text-[#FDFBF7] mb-6">
               Become a Cultural <br />Guardian.
             </h2>
