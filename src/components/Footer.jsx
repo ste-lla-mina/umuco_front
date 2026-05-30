@@ -9,7 +9,7 @@ function Footer() {
           
           <div className="lg:col-span-4 flex flex-col items-start text-left">
             <h3 className="font-serif text-2xl font-bold tracking-wide text-[#FDFBF7] mb-4">
-              Umuco Hub
+              UmucoCore
             </h3>
             <p className="text-sm text-[#A39E93] leading-relaxed max-w-sm mb-6 font-normal">
               Connecting the world to the heart of Rwanda. Experience the depth of our 
