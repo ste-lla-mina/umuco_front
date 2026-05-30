@@ -41,8 +41,8 @@ export default function SignUpPage({ onNavigate }) {
           </div>
 
           <h2 className="text-4xl font-bold tracking-tight text-white leading-tight mb-4">
-            Umurage ni inkingi ya <br />
-            <span className="text-[#FCDFD3]">Kazoza.</span>
+            Heritage is our
+            <span className="text-[#FCDFD3]"> Legacy.</span>
           </h2>
 
           <div className="w-16 h-[2px] bg-[#8D493A] mb-6" />
@@ -52,8 +52,8 @@ export default function SignUpPage({ onNavigate }) {
             In every story told, a nation lives on."
           </p>
 
-          <div className="mt-12 flex items-center space-x-3 text-xxs font-semibold tracking-widest text-white/40 uppercase">
-            <span>PRESERVING RWANDA'S DIGITAL SOUL</span>
+          <div className="mt-12 flex items-center space-x-3 text-xxs font-semibold tracking-widest text-white/40 ">
+            <span>Preserving Rwandan Nature and Roots.</span>
           </div>
         </div>
       </div>
@@ -61,24 +61,23 @@ export default function SignUpPage({ onNavigate }) {
       <div className="w-full lg:w-7/12 flex flex-col justify-between p-8 md:p-12 lg:p-16 bg-[#FDFBF7] border-l border-[#EADBC8]/30">
         <div className="flex items-center justify-between w-full mb-8">
           <div onClick={() => onNavigate('home')} className="flex items-center space-x-1.5 cursor-pointer">
-            <span className="font-serif text-xl font-bold tracking-wide text-[#2C1A14]">Umuco</span>
-            <span className="font-sans text-xs bg-[#8D493A] text-white px-1.5 py-0.5 rounded-md font-bold uppercase tracking-wider">Core</span>
+            <span className="font-sans text-xs bg-[#8D493A] text-white px-1.5 py-0.5 rounded-md font-bold tracking-wider">UmucoCore</span>
           </div>
         </div>
 
         <div className="w-full max-w-md mx-auto my-auto">
           <div className="text-left mb-8">
             <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-[#2C1A14] mb-2">
-              Hanga Konti
+              Create Account
             </h1>
             <p className="text-xs md:text-sm text-[#6F5B55]">
-              Create your passport to heritage gateway.
+              Set up your profile to the heritage gateway.
             </p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-5">
             <div className="relative text-left">
-              <label className="block text-xxs font-bold text-[#2C1A14] tracking-wider uppercase mb-1.5">Full Name</label>
+              <label className="block text-[10px] font-bold text-[#2C1A14] tracking-wider uppercase mb-1.5">Full Name</label>
               <div className="relative">
                 <input 
                   type="text" 
@@ -96,7 +95,7 @@ export default function SignUpPage({ onNavigate }) {
             </div>
 
             <div className="relative text-left">
-              <label className="block text-xxs font-bold text-[#2C1A14] tracking-wider uppercase mb-1.5">Email Address</label>
+              <label className="block text-[10px] font-bold text-[#2C1A14] tracking-wider uppercase mb-1.5">Email Address</label>
               <div className="relative">
                 <input 
                   type="email" 
@@ -114,7 +113,7 @@ export default function SignUpPage({ onNavigate }) {
             </div>
 
             <div className="relative text-left">
-              <label className="block text-xxs font-bold text-[#2C1A14] tracking-wider uppercase mb-1.5">Password</label>
+              <label className="block text-[10px] font-bold text-[#2C1A14] tracking-wider uppercase mb-1.5">Password</label>
               <div className="relative">
                 <input 
                   type={showPassword ? 'text' : 'password'} 
@@ -158,7 +157,7 @@ export default function SignUpPage({ onNavigate }) {
               type="submit" 
               className="w-full bg-[#8D493A] hover:bg-[#3E2723] text-white py-3 px-4 rounded-xl font-semibold text-xs tracking-widest uppercase shadow-xs transition-colors duration-200 mt-2"
             >
-              Sign Up / Kwiyandikisha
+              Sign Up 
             </button>
           </form>
 
@@ -168,20 +167,6 @@ export default function SignUpPage({ onNavigate }) {
               Sign In
             </button>
           </p>
-        </div>
-
-        <div className="w-full pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-[#EADBC8]/40 text-xxs tracking-wide text-neutral-400 font-medium">
-          <div className="flex items-center space-x-1">
-            <svg className="w-3.5 h-3.5 text-[#34A853]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-            <span className="uppercase font-bold tracking-wider text-[#34A853]">SECURE ENCRYPTED ACCESS</span>
-          </div>
-          <div className="flex items-center space-x-4">
-            <a href="#" className="hover:text-neutral-600 transition-colors">Privacy</a>
-            <a href="#" className="hover:text-neutral-600 transition-colors">Terms</a>
-            <a href="#" className="hover:text-neutral-600 transition-colors">Support</a>
-          </div>
         </div>
       </div>
     </section>
