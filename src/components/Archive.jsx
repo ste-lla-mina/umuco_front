@@ -72,4 +72,4 @@ function DigitalArchive() {
     </section>
   );
 }
-export default Archive;
+export default DigitalArchive;
