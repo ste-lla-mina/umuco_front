@@ -4,6 +4,7 @@ import { ArrowRight, Compass, BookOpen, Users, Milestone } from 'lucide-react';
 import cardImg1 from '../assets/tradi.jpg';
 import cardImg2 from '../assets/book.png';
 import cardImg3 from '../assets/iraba.jpg';
+
 function Hero() {
   const [order, setOrder] = useState([0, 1, 2]);
 
@@ -33,7 +34,6 @@ function Hero() {
       img: cardImg3,
       icon: Users
     },
-    
     {
       title: 'Learn Kinyarwanda',
       desc: 'Master the language of thousand hills with interactive means.',
@@ -46,7 +46,6 @@ function Hero() {
       img: cardImg1,
       icon: Compass
     }
-    
   ];
 
   const positions = [
@@ -56,7 +55,7 @@ function Hero() {
   ];
 
   return (
-    <section className="w-full bg-[#FDFBF7] font-sans px-6 py-12 md:py-20 overflow-hidden">
+    <section className="w-full bg-[#FDFBF7] font-sans px-6 pt-28 pb-12 md:pt-36 md:pb-20 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         <div className="lg:col-span-6 flex flex-col items-start text-left px-6">
