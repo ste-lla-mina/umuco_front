@@ -5,7 +5,7 @@ function DigitalArchive() {
   const collections = [
     {
       title: 'Oral History',
-      desc: 'High-fidelity recordings of the elders\' stories, preserved forever in our secure cloud.',
+      desc: "High-fidelity recordings of the elders' stories, preserved forever in our secure cloud.",
       icon: History
     },
     {
@@ -21,7 +21,7 @@ function DigitalArchive() {
   ];
 
   return (
-    <section className="w-full bg-[#FDFBF7] font-sans px-10 py-16 md:py-24 border-t border-[#EADBC8]/40">
+    <section className="w-full bg-[#FDFBF7] font-sans px-10 py-16 md:py-24 border-t border-[#EADBC8]/40 scroll-mt-24">
       <div className="max-w-7xl mx-auto">
         
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-16">
@@ -72,4 +72,5 @@ function DigitalArchive() {
     </section>
   );
 }
+
 export default DigitalArchive;
