@@ -2,7 +2,7 @@ import React from 'react';
 import { Share2, MessageSquare } from 'lucide-react';
 function Footer() {
   return (
-    <footer className="w-full bg-[#232321] text-white font-sans px-6 pt-16 pb-8 border-t border-white/5">
+    <footer className="w-full bg-[#3E2319] text-white font-sans px-6 pt-16 pb-8 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-16 border-b border-white/10">
