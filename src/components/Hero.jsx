@@ -3,7 +3,7 @@ import { ArrowRight, Compass, BookOpen, Users, Milestone } from 'lucide-react';
 
 import cardImg1 from '../assets/tradi.jpg';
 import cardImg2 from '../assets/book.png';
-import cardImg3 from '../assets/conne.jpg';
+import cardImg3 from '../assets/iraba.jpg';
 function Hero() {
   const [order, setOrder] = useState([0, 1, 2]);
 
