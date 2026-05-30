@@ -1,7 +1,7 @@
 import React from 'react';
 import { Quote, FilePlus, ShieldAlert } from 'lucide-react';
 import joinImg from '../assets/tra.png'; 
-export default function CommunityGuardian() {
+function CommunityGuardian() {
   return (
     <div className="w-full bg-[#FDFBF7] font-sans">
       <section className="w-full px-6 py-20 md:py-20 text-center bg-[#FDFBF7] border-t border-[#EADBC8]/40">
@@ -68,3 +68,4 @@ export default function CommunityGuardian() {
     </div>
   );
 }
+export default CommunityGuardian;
