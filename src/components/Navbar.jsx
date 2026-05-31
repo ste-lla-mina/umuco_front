@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { ArrowRight, Globe } from 'lucide-react';
 
-function Navbar({ onNavigate }) {
-  const [activeTab, setActiveTab] = useState('Home');
+function Navbar({ onNavigate, activeSection }) {
   const [currentLang, setCurrentLang] = useState('EN');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const navItems = [
-    { label: 'Home', id: '#' },
+    { label: 'Home', id: '#home-section' },
     { label: 'About', id: '#archive' },
     { label: 'Community', id: '#community' }
   ];
@@ -29,12 +28,11 @@ function Navbar({ onNavigate }) {
 
         <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
           {navItems.map((item) => {
-            const isActive = activeTab === item.label;
+            const isActive = activeSection === item.label;
             return (
               <a
                 key={item.label}
                 href={item.id}
-                onClick={() => setActiveTab(item.label)}
                 className={`relative pb-2 transition-colors duration-200 ${
                   isActive 
                     ? 'text-[#8D493A] font-semibold' 
@@ -90,7 +88,7 @@ function Navbar({ onNavigate }) {
 
           <button 
             onClick={() => onNavigate('signup')}
-            className="flex items-center space-x-2 bg-[#8D493A] hover:bg-[#6f5b55] text-[#FDFBF7] px-5 py-2 text-sm font-medium tracking-wide transition-all rounded-[25px] shadow-sm group"
+            className="flex items-center space-x-2 bg-[#8D493A] hover:bg-[#3E2723] text-[#FDFBF7] px-5 py-2 text-sm font-medium tracking-wide transition-all rounded-[25px] shadow-sm group"
           >
             <span>Join</span>
             <ArrowRight className="w-4 h-4 transform transition-transform group-hover:translate-x-1" />
