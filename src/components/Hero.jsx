@@ -55,45 +55,47 @@ function Hero() {
   ];
 
   return (
-    <section className="w-full bg-[#FDFBF7] font-sans px-6 pt-28 pb-12 md:pt-36 md:pb-20 overflow-hidden">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <section className="w-full bg-[#FDFBF7] font-sans px-4 sm:px-6 pt-24 pb-12 md:pt-36 md:pb-20 overflow-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
-        <div className="lg:col-span-6 flex flex-col items-start text-left px-6">
-          <div className="inline-flex items-center space-x-2 bg-[#FCDFD3]/40 border border-[#EADBC8] rounded-full px-4 py-1 mb-6">
-            <Milestone className="w-3.5 h-3.5 text-[#8D493A]" />
-            <span className="text-xxs md:text-xs font-semibold tracking-widest text-[#8D493A] uppercase">
+        {/* Left Column Text Pane */}
+        <div className="col-span-1 lg:col-span-6 flex flex-col items-start text-left px-2 sm:px-6">
+          <div className="inline-flex items-center space-x-2 bg-[#FCDFD3]/40 border border-[#EADBC8] rounded-full px-3 py-1 mb-4 sm:mb-6">
+            <Milestone className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#8D493A]" />
+            <span className="text-[9px] sm:text-xs font-semibold tracking-widest text-[#8D493A] uppercase">
               DIGITALIZING CULTURAL ACCESS.
             </span>
           </div>
 
-          <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#2C1A14] leading-[1.1] mb-6">
-            The Sanctuary of <br/> Our
+          <h1 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#2C1A14] leading-[1.15] lg:leading-[1.1] mb-4 sm:mb-6">
+            The Sanctuary of <br className="hidden sm:inline" /> Our
             <span className="text-[#8D493A]"> Heritage.</span>
           </h1>
 
-          <p className="text-sm md:text-base text-[#6F5B55] max-w-xl leading-relaxed mb-8 font-normal">
-            Sustaining the nation's pulse by keeping our roots, carrying the<br/> spoken 
+          <p className="text-xs sm:text-sm md:text-base text-[#6F5B55] max-w-xl leading-relaxed mb-6 sm:mb-8 font-normal">
+            Sustaining the nation's pulse by keeping our roots, carrying the <br/>spoken 
             wisdom of our ancestors, for our shared pact.
           </p>
 
-          <div className="flex flex-wrap items-center gap-4 w-full border-b border-[#EADBC8]/60 pb-12">
-            <button className="flex items-center space-x-2 bg-[#8D493A] hover:bg-[#3E2723] text-[#FDFBF7] px-6 py-3.5 text-sm font-semibold tracking-wide transition-colors duration-200 rounded-lg shadow-sm group">
+          <div className="flex flex-row items-center gap-2 sm:gap-4 w-full border-b border-[#EADBC8]/60 pb-8 sm:pb-12">
+            <button className="flex items-center justify-center space-x-1 sm:space-x-2 bg-[#8D493A] hover:bg-[#3E2723] text-[#FDFBF7] px-3 sm:px-6 py-2.5 sm:py-3.5 text-[11px] sm:text-sm font-semibold tracking-wide transition-colors duration-200 rounded-lg shadow-sm group flex-1 sm:flex-initial whitespace-nowrap">
               <span>Get Involved</span>
-              <ArrowRight className="w-4 h-4 transform transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transform transition-transform group-hover:translate-x-1" />
             </button>
 
-            <button className="border border-[#8D493A]/40 hover:bg-[#8D493A]/5 text-[#8D493A] px-6 py-3.5 text-sm font-semibold tracking-wide transition-all duration-200 rounded-lg">
+            <button className="border border-[#8D493A]/40 hover:bg-[#8D493A]/5 text-[#8D493A] px-3 sm:px-6 py-2.5 sm:py-3.5 text-[11px] sm:text-sm font-semibold tracking-wide transition-all duration-200 rounded-lg flex-1 sm:flex-initial text-center whitespace-nowrap">
               Explore More
             </button>
           </div>
 
-          <div className="w-full pt-8 grid grid-cols-3 gap-4">
+          {/* Stats Grid */}
+          <div className="w-full pt-6 sm:pt-8 grid grid-cols-3 gap-2 sm:gap-4">
             {stats.map((stat, index) => (
               <div key={index} className="flex flex-col">
-                <span className="font-sans text-xl md:text-2xl font-bold text-[#8D493A]">
+                <span className="font-sans text-lg sm:text-xl md:text-2xl font-bold text-[#8D493A]">
                   {stat.value}
                 </span>
-                <span className="text-xxs md:text-xs text-[#8D493A] tracking-wider font-semibold mt-1 uppercase">
+                <span className="text-[9px] sm:text-xxs md:text-xs text-[#8D493A] tracking-wider font-semibold mt-1 uppercase">
                   {stat.label}
                 </span>
               </div>
@@ -101,7 +103,8 @@ function Hero() {
           </div>
         </div>
 
-        <div className="lg:col-span-6 relative h-[520px] w-full flex items-start justify-center lg:justify-start lg:pl-12 mt-8 lg:mt-0">
+        {/* Right Column Stack Cards Loop - Hidden on Mobile/Tablet */}
+        <div className="hidden lg:flex lg:col-span-6 relative h-[520px] w-full items-start justify-start lg:pl-12 mt-8 lg:mt-0">
           <div className="relative w-[384px] h-[480px]">
             {features.map((item, index) => {
               const IconComponent = item.icon;
