@@ -103,7 +103,7 @@ function LoginPage({ onNavigate }) {
           {!isForgotPassword ? (
             <>
               <div className="text-left mb-8">
-                <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-[#2C1A14] mb-2">
+                <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-[#8D493A] mb-2">
                   Welcome Back!
                 </h1>
                 <p className="text-xs md:text-sm text-[#6F5B55]">
@@ -276,11 +276,11 @@ function LoginPage({ onNavigate }) {
               )}
 
               {verificationStep === 'success' && (
-                <div className="bg-[#34A853]/10 border border-[#34A853]/20 rounded-xl p-5 text-left flex flex-col items-center text-center">
+                <div className="bg-[#FCDFD3]/15 border border-[#EADBC8]/30  rounded-xl p-5 text-left flex flex-col items-center text-center">
                   <div className="w-12 h-12 bg-[#34A853]/20 rounded-full flex items-center justify-center mb-3">
                     <ShieldCheck className="w-6 h-6 text-[#34A853]" />
                   </div>
-                  <p className="text-sm font-bold text-[#2C1A14] mb-1">
+                  <p className="text-sm font-bold text-[#8D493A] mb-1">
                     Identity Verified
                   </p>
                   <p className="text-xs text-[#6F5B55] leading-relaxed max-w-xs">
@@ -288,7 +288,7 @@ function LoginPage({ onNavigate }) {
                   </p>
                   <button 
                     onClick={() => setIsForgotPassword(false)}
-                    className="mt-5 w-full bg-white border border-[#EADBC8] hover:bg-neutral-50 text-[#2C1A14] py-2.5 px-4 rounded-xl font-semibold text-xs tracking-wide transition-colors"
+                    className="mt-5 w-full bg-[#8D493A] border border-[#EADBC8] text-white py-2.5 px-4 rounded-xl font-semibold text-xs tracking-wide transition-colors"
                   >
                     Return to Log In
                   </button>
