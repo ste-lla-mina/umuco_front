@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import DigitalArchive from "./components/Archive";
@@ -9,11 +9,53 @@ import SignUpPage from "./components/AuthPage";
 
 function App() {
   const [currentView, setCurrentView] = useState('home'); // 'home', 'login', 'signup'
+  const [activeSection, setActiveSection] = useState('Home'); // Tracks scroll area: 'Home', 'About', 'Community'
 
   const navigateTo = (view) => {
     setCurrentView(view);
     window.scrollTo({ top: 0 });
   };
+
+  useEffect(() => {
+    if (currentView !== 'home') return;
+
+    const sections = [
+      { id: 'home-section', label: 'Home' },
+      { id: 'archive', label: 'About' },
+      { id: 'community', label: 'Community' }
+    ];
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-50% 0px -50% 0px',
+      threshold: 0
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const matched = sections.find(sec => sec.id === entry.target.id);
+          if (matched) {
+            setActiveSection(matched.label);
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    sections.forEach((sec) => {
+      const el = document.getElementById(sec.id);
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      sections.forEach((sec) => {
+        const el = document.getElementById(sec.id);
+        if (el) observer.unobserve(el);
+      });
+    };
+  }, [currentView]);
 
   if (currentView === 'login') {
     return <LoginPage onNavigate={navigateTo} />;
@@ -25,14 +67,18 @@ function App() {
 
   return (
     <div className="w-full min-h-screen bg-[#FDFBF7] antialiased scroll-smooth">
-      <Navbar onNavigate={navigateTo} />
-      <Hero />
-      <div id="archive">
+      <Navbar onNavigate={navigateTo} activeSection={activeSection} />
+      
+      <div id="home-section">
+        <Hero />
+      </div>
+      <div id="archive" className="scroll-mt-20">
         <DigitalArchive />
       </div>
-      <div id="community">
+      <div id="community" className="scroll-mt-20">
         <CommunityGuardian />
       </div>
+      
       <Footer />
     </div>
   );
