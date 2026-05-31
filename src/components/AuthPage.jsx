@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Mail, Lock, Eye, EyeOff, User, Milestone, ArrowLeft, ShieldCheck } from 'lucide-react';
 import authLeftBg from '../assets/tra.png';
 
-export default function SignUpPage({ onNavigate }) {
+function SignUpPage({ onNavigate }) {
   const [showPassword, setShowPassword] = useState(false);
   const [isVerifying, setIsVerifying] = useState(false);
   const [verificationCode, setVerificationCode] = useState(['', '', '', '', '', '']);
@@ -97,7 +97,7 @@ export default function SignUpPage({ onNavigate }) {
           {!isVerifying ? (
             <>
               <div className="text-left mb-8">
-                <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-[#2C1A14] mb-2">
+                <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-[#8D493A] mb-2">
                   Create Account
                 </h1>
                 <p className="text-xs md:text-sm text-[#6F5B55]">
@@ -247,12 +247,12 @@ export default function SignUpPage({ onNavigate }) {
               </form>
             </>
           ) : (
-            <div className="bg-[#34A853]/10 border border-[#34A853]/20 rounded-xl p-5 text-left flex flex-col items-center text-center">
+            <div className="bg-[#FCDFD3]/15 border border-[#EADBC8]/30 rounded-xl p-5 text-left flex flex-col items-center text-center">
               <div className="w-12 h-12 bg-[#34A853]/20 rounded-full flex items-center justify-center mb-3">
                 <ShieldCheck className="w-6 h-6 text-[#34A853]" />
               </div>
-              <p className="text-sm font-bold text-[#2C1A14] mb-1">
-                Registration Complete
+              <p className="text-sm font-bold text-[#8D493A] mb-1">
+                Registration Complete.
               </p>
               <p className="text-xs text-[#6F5B55] leading-relaxed max-w-xs">
                 Welcome to UmucoCore, <span className="font-semibold text-[#2C1A14]">{formData.name}</span>! Your cultural gateway identity has been officially provisioned.
@@ -270,3 +270,4 @@ export default function SignUpPage({ onNavigate }) {
     </section>
   );
 }
+export default SignUpPage;
