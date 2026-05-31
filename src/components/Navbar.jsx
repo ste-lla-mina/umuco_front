@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { ArrowRight, Globe } from 'lucide-react';
+import { ArrowRight, Globe, Menu, X } from 'lucide-react';
 
 function Navbar({ onNavigate, activeSection }) {
   const [currentLang, setCurrentLang] = useState('EN');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
     { label: 'Home', id: '#home-section' },
@@ -16,11 +17,22 @@ function Navbar({ onNavigate, activeSection }) {
     setIsDropdownOpen(false);
   };
 
+  const handleMobileNavClick = (view, sectionId) => {
+    setIsMobileMenuOpen(false);
+    onNavigate(view);
+    if (sectionId) {
+      setTimeout(() => {
+        const el = document.getElementById(sectionId.replace('#', ''));
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  };
+
   return (
-    <header className="w-full bg-[#FDFBF7]/90 backdrop-blur-md border-b border-[#EADBC8] px-6 py-2 font-sans shadow-sm fixed top-0 left-0 z-50">
+    <header className="w-full bg-[#FDFBF7]/90 backdrop-blur-md border-b border-[#EADBC8] px-4 md:px-6 py-3 font-sans shadow-sm fixed top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         
-        <div onClick={() => onNavigate('home')} className="flex items-center space-x-3 cursor-pointer">
+        <div onClick={() => handleMobileNavClick('home', '#home-section')} className="flex items-center space-x-3 cursor-pointer">
           <span className="text-[20px] font-bold tracking-wide text-[#8D493A]">
             UmucoCore
           </span>
@@ -48,7 +60,7 @@ function Navbar({ onNavigate, activeSection }) {
           })}
         </nav>
 
-        <div className="flex items-center space-x-6">
+        <div className="hidden md:flex items-center space-x-6">
           <div className="relative">
             <button 
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -95,7 +107,76 @@ function Navbar({ onNavigate, activeSection }) {
           </button>
         </div>
 
+        <div className="flex md:hidden items-center">
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="text-[#8D493A] hover:text-[#3E2723] p-1 focus:outline-none"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
       </div>
+
+      {isMobileMenuOpen && (
+        <div className="md:hidden fixed inset-x-0 top-[57px] bg-[#FDFBF7] border-b border-[#EADBC8] shadow-xl z-40 animate-fadeIn flex flex-col px-6 py-6 space-y-6 max-h-[calc(100vh-57px)] overflow-y-auto">
+          <nav className="flex flex-col space-y-4">
+            {navItems.map((item) => {
+              const isActive = activeSection === item.label;
+              return (
+                <a
+                  key={item.label}
+                  href={item.id}
+                  onClick={() => handleMobileNavClick('home', item.id)}
+                  className={`text-base font-semibold py-2 border-b border-[#EADBC8]/30 ${
+                    isActive ? 'text-[#8D493A]' : 'text-[#6F5B55]'
+                  }`}
+                >
+                  {item.label}
+                </a>
+              );
+            })}
+          </nav>
+
+          <div className="flex items-center justify-between py-2 border-b border-[#EADBC8]/30">
+            <span className="text-sm font-medium text-[#6F5B55]">Language / Ururimi</span>
+            <div className="flex space-x-2">
+              <button
+                onClick={() => toggleLanguage('EN')}
+                className={`px-3 py-1 text-xs font-bold rounded-lg ${
+                  currentLang === 'EN' ? 'bg-[#8D493A] text-white' : 'border border-[#EADBC8] text-[#6F5B55]'
+                }`}
+              >
+                EN
+              </button>
+              <button
+                onClick={() => toggleLanguage('KN')}
+                className={`px-3 py-1 text-xs font-bold rounded-lg ${
+                  currentLang === 'KN' ? 'bg-[#8D493A] text-white' : 'border border-[#EADBC8] text-[#6F5B55]'
+                }`}
+              >
+                KN
+              </button>
+            </div>
+          </div>
+
+          <div className="flex flex-col space-y-3 pt-2">
+            <button
+              onClick={() => handleMobileNavClick('login', null)}
+              className="w-full text-center border border-[#8D493A] text-[#8D493A] font-semibold py-3 rounded-xl text-sm hover:bg-[#8D493A]/5 transition-colors"
+            >
+              Login
+            </button>
+            <button
+              onClick={() => handleMobileNavClick('signup', null)}
+              className="w-full text-center bg-[#8D493A] hover:bg-[#3E2723] text-white font-semibold py-3 rounded-xl text-sm flex items-center justify-center space-x-2 shadow-sm"
+            >
+              <span>Join UmucoCore</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
