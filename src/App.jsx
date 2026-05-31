@@ -8,8 +8,8 @@ import LoginPage from "./components/LoginPage";
 import SignUpPage from "./components/AuthPage";
 
 function App() {
-  const [currentView, setCurrentView] = useState('home'); // 'home', 'login', 'signup'
-  const [activeSection, setActiveSection] = useState('Home'); // Tracks scroll area: 'Home', 'About', 'Community'
+  const [currentView, setCurrentView] = useState('home'); 
+  const [activeSection, setActiveSection] = useState('Home'); 
 
   const navigateTo = (view) => {
     setCurrentView(view);
