@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Quote, FilePlus, ShieldAlert } from 'lucide-react';
 import joinImg from '../assets/tra.png'; 
 
-function CommunityGuardian() {
+function CommunityGuardian({onNavigate}) {
   return (
     <div className="w-full bg-[#FDFBF7] font-sans scroll-mt-24">
       <section className="w-full px-4 sm:px-6 py-12 sm:py-20 text-center bg-[#FDFBF7] border-t border-[#EADBC8]/40">
@@ -23,7 +23,7 @@ function CommunityGuardian() {
             Explore the deep wisdom of Rwandan culture.
           </p>
           
-          <button className="bg-[#8D493A] hover:bg-[#3E2723] text-[#FDFBF7] px-5 py-3 text-xs sm:text-sm font-semibold tracking-wide rounded-xl transition-all duration-200 shadow-sm w-full sm:w-auto">
+          <button onClick={() => onNavigate('signup')} className="bg-[#8D493A] hover:bg-[#3E2723] text-[#FDFBF7] px-5 py-3 text-xs sm:text-sm font-semibold tracking-wide rounded-xl transition-all duration-200 shadow-sm w-full sm:w-auto">
             Create Your Account
           </button>
         </div>
@@ -44,12 +44,12 @@ function CommunityGuardian() {
             </p>
             
             <div className="flex flex-row flex-wrap sm:flex-nowrap items-center gap-3 w-full">
-              <button className="inline-flex items-center justify-center space-x-1.5 sm:space-x-2.5 bg-[#FCDFD3] hover:bg-[#EADBC8] text-[#8D493A] px-3 sm:px-6 py-3 rounded-xl text-[11px] sm:text-sm font-bold transition-all duration-200 tracking-wide shadow-sm flex-1 sm:flex-initial whitespace-nowrap">
+              <button onClick={() => onNavigate('signup')} className="inline-flex items-center justify-center space-x-1.5 sm:space-x-2.5 bg-[#FCDFD3] hover:bg-[#EADBC8] text-[#8D493A] px-3 sm:px-6 py-3 rounded-xl text-[11px] sm:text-sm font-bold transition-all duration-200 tracking-wide shadow-sm flex-1 sm:flex-initial whitespace-nowrap">
                 <FilePlus className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#8D493A]" />
                 <span>Contribute</span>
               </button>
               
-              <button className="inline-flex items-center justify-center space-x-1.5 sm:space-x-2.5 border border-[#EADBC8]/30 hover:bg-white/5 text-[#FDFBF7] px-3 sm:px-6 py-3 rounded-xl text-[11px] sm:text-sm font-bold transition-all duration-200 tracking-wide flex-1 sm:flex-initial whitespace-nowrap">
+              <button onClick={() => onNavigate('login')} className="inline-flex items-center justify-center space-x-1.5 sm:space-x-2.5 border border-[#EADBC8]/30 hover:bg-white/5 text-[#FDFBF7] px-3 sm:px-6 py-3 rounded-xl text-[11px] sm:text-sm font-bold transition-all duration-200 tracking-wide flex-1 sm:flex-initial whitespace-nowrap">
                 <ShieldAlert className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#EADBC8]/60" />
                 <span>Dashboard</span>
               </button>
