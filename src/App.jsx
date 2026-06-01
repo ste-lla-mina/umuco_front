@@ -70,13 +70,13 @@ function App() {
       <Navbar onNavigate={navigateTo} activeSection={activeSection} />
       
       <div id="home-section">
-        <Hero />
+        <Hero onNavigate={navigateTo} />
       </div>
       <div id="archive" className="scroll-mt-20">
         <DigitalArchive />
       </div>
       <div id="community" className="scroll-mt-20">
-        <CommunityGuardian />
+        <CommunityGuardian onNavigate={navigateTo} />
       </div>
       
       <Footer />
