@@ -6,6 +6,7 @@ import CommunityGuardian from "./components/landing/Community";
 import Footer from "./components/landing/Footer";
 import LoginPage from "./components/landing/LoginPage";
 import SignUpPage from "./components/landing/AuthPage";
+import Dashboard from "./components/dashboard/Dashboard";
 
 function App() {
   const [currentView, setCurrentView] = useState('home'); 
@@ -63,6 +64,10 @@ function App() {
 
   if (currentView === 'signup') {
     return <SignUpPage onNavigate={navigateTo} />;
+  }
+
+  if (currentView === 'dashboard') {
+    return <Dashboard onLogout={() => navigateTo('home')} />;
   }
 
   return (
