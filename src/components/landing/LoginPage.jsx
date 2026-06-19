@@ -40,6 +40,7 @@ function LoginPage({ onNavigate }) {
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
+    onNavigate('dashboard');
   };
 
   const handleEmailSubmit = (e) => {
@@ -287,10 +288,10 @@ function LoginPage({ onNavigate }) {
                     Security gateway validation complete. You may now continue inside your secure user instance panel.
                   </p>
                   <button 
-                    onClick={() => setIsForgotPassword(false)}
+                    onClick={() => onNavigate('dashboard')}
                     className="mt-5 w-full bg-[#8D493A] border border-[#EADBC8] text-white py-2.5 px-4 rounded-xl font-semibold text-xs tracking-wide transition-colors"
                   >
-                    Return to Log In
+                    Go to Dashboard
                   </button>
                 </div>
               )}
