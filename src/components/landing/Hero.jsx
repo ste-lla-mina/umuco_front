@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Compass, BookOpen, Users, Milestone } from 'lucide-react';
 
-import cardImg1 from '../assets/tradi.jpg';
-import cardImg2 from '../assets/book.png';
-import cardImg3 from '../assets/iraba.jpg';
+import cardImg1 from '../../assets/tradi.jpg';
+import cardImg2 from '../../assets/book.png';
+import cardImg3 from '../../assets/iraba.jpg';
 
 function Hero({onNavigate}) {
   const [order, setOrder] = useState([0, 1, 2]);

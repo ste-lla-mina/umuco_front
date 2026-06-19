@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import DigitalArchive from "./components/Archive";
-import CommunityGuardian from "./components/Community";
-import Footer from "./components/Footer";
-import LoginPage from "./components/LoginPage";
-import SignUpPage from "./components/AuthPage";
+import Navbar from "./components/landing/Navbar";
+import Hero from "./components/landing/Hero";
+import DigitalArchive from "./components/landing/Archive";
+import CommunityGuardian from "./components/landing/Community";
+import Footer from "./components/landing/Footer";
+import LoginPage from "./components/landing/LoginPage";
+import SignUpPage from "./components/landing/AuthPage";
 
 function App() {
   const [currentView, setCurrentView] = useState('home'); 

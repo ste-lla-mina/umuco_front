@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Quote, FilePlus, ShieldAlert } from 'lucide-react';
-import joinImg from '../assets/tra.png'; 
+import joinImg from '../../assets/tra.png'; 
 
 function CommunityGuardian({onNavigate}) {
   return (
