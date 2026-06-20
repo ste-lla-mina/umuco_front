@@ -48,7 +48,7 @@ function Sidebar({ activeTab, setActiveTab, onLogout }) {
       
       <div className="flex flex-col space-y-7">
         <div className="px-2 py-1">
-          <h2 className="text-xl font-bold tracking-wide text-[#8D493A]">Umuco Core.</h2>
+          <h2 className="text-xl font-bold text-[#8D493A]">Umuco Core.</h2>
           <p className="text-xs text-[#6F5B55]/70 tracking-tight">Rwanda Cultural Archive.</p>
         </div>
         <nav className="flex flex-col space-y-1">
