@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import Topbar from './Topbar';
+import Home from './Home';
+import Explore from './Explore'
 
 function Dashboard({ onLogout }) {
   const [activeTab, setActiveTab] = useState('home');
@@ -10,7 +12,17 @@ function Dashboard({ onLogout }) {
      email: 'stella@gmail.com',
      avatar: null
   })
+  const renderContent = () => {
+    switch(activeTab){
+      case 'home':
+        return <Home userProfile={userProfile} setActiveTab={setActiveTab}/>;
+      case 'explore':
+        return <Explore setActiveTab={setActiveTab}/>
+      default:
+        return "content coming soon.."
 
+    }
+  };
   return (
    <div className="flex w-full min-h-screen bg-[#FDFBF7]">
       <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} onLogout={onLogout} />
@@ -19,7 +31,7 @@ function Dashboard({ onLogout }) {
         <Topbar userProfile={userProfile} onUpdateProfile={setUserProfile} />
         
         <main className="w-full h-full max-w-7xl mx-auto py-6 px-8 text-[#2C1A14]">
-          <div className="p-4">Active View Window Panel: <b className="text-[#8D493A] uppercase">{activeTab}</b></div>
+          {renderContent() }
         </main>
       </div>
     </div>
