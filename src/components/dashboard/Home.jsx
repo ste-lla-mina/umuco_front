@@ -171,15 +171,15 @@ function Home({ userProfile, setActiveTab }) {
               <h3 className="text-xs font-bold text-[#6F5B55]/90 uppercase tracking-wider mb-4">Your Activity</h3>
               <div className="relative border-l border-neutral-100 pl-4 space-y-4 text-xs">
                 <div>
-                  <p className="font-bold text-[#2C1A14]">Viewed: The Royal Palace – Nyanza</p>
+                  <p className="font-bold text-[#2C1A14]">Viewed: King's Palace.</p>
                   <span className="text-[10px] text-neutral-400 font-medium block mt-0.5">16 May 2025</span>
                 </div>
                 <div>
-                  <p className="font-bold text-[#2C1A14]">Saved: Intore Dance</p>
+                  <p className="font-bold text-[#2C1A14]">Saved: Intore Dance.</p>
                   <span className="text-[10px] text-neutral-400 font-medium block mt-0.5">15 May 2025</span>
                 </div>
                 <div>
-                  <p className="font-bold text-[#2C1A14]">Listened: Byivugo by Intore</p>
+                  <p className="font-bold text-[#2C1A14]">Listened: Ibyivugo by'intore.</p>
                   <span className="text-[10px] text-neutral-400 font-medium block mt-0.5">16 May 2025</span>
                 </div>
               </div>
@@ -216,12 +216,12 @@ function Home({ userProfile, setActiveTab }) {
             </button>
 
             <button 
-              onClick={() => setActiveTab('contribute')}
+              onClick={() => setActiveTab('saved')}
               className="w-full flex items-center justify-between p-3 rounded-xl bg-[#FDFBF7] border border-[#EADBC8]/50 hover:border-[#8D493A]/40 transition-colors group"
             >
               <div className="flex items-center space-x-3">
                 <span className="text-base font-medium text-[#8D493A] leading-none -mt-0.5">+</span>
-                <span className="text-xs font-bold text-[#2C1A14]">Contribute</span>
+                <span className="text-xs font-bold text-[#2C1A14]">Add to Library</span>
               </div>
               <ChevronRight className="w-4 h-4 text-neutral-300 group-hover:text-[#8D493A] transition-colors" />
             </button>
