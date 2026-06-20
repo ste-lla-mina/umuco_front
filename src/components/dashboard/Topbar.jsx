@@ -39,31 +39,36 @@ function Topbar({ userProfile, onUpdateProfile }) {
     }
     setProfileModalOpen(false);
   };
+  
   const getInitials = (name) => {
     return name ? name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2) : 'MJ';
   };
 
   return (
     <>
-      <header className="w-full h-20 bg-[#FDFBF7]/80 backdrop-blur-md border-b border-[#EADBC8]/60 px-6 md:px-8 flex items-center justify-between sticky top-0 z-30 font-sans">
-        <div className="flex-1 max-w-md md:max-w-xl">
+      <header className="w-full h-20 bg-[#FDFBF7]/80 backdrop-blur-md border-b border-[#EADBC8]/60 px-4 sm:px-6 md:px-8 flex items-center justify-between sticky top-0 z-30 font-sans pl-16 lg:pl-8">
+        
+        {/* Search Field */}
+        <div className="flex-1 max-w-xs sm:max-w-md md:max-w-xl">
           <div className="relative w-full">
             <input
               type="text"
-              placeholder="Search from the archive"
-              className="w-full bg-[#FDFBF7] border border-[#EADBC8] hover:border-[#8D493A]/50 focus:border-[#8D493A] text-sm text-[#2C1A14] placeholder-neutral-400 rounded-full pl-11 pr-4 py-2.5 outline-none transition-all duration-200"
+              placeholder="Search..."
+              className="w-full bg-[#FDFBF7] border border-[#EADBC8] hover:border-[#8D493A]/50 focus:border-[#8D493A] text-sm text-[#2C1A14] placeholder-neutral-400 rounded-full pl-10 pr-4 py-2 outline-none transition-all duration-200"
             />
-            <Search className="w-4 h-4 text-neutral-400 absolute left-4 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-neutral-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
           </div>
         </div>
-        <div className="flex items-center space-x-3 md:space-x-5 ml-4">
+
+        {/* Global Control Preferences Actions */}
+        <div className="flex items-center space-x-2 sm:space-x-4 ml-2 sm:ml-4">
           <div className="relative" ref={langRef}>
             <button
               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-              className="flex items-center space-x-1.5 px-3 py-2 text-xs font-bold text-[#8D493A] hover:bg-[#FCDFD3]/20 rounded-xl transition-all"
+              className="flex items-center space-x-1 px-2.5 py-2 text-xs font-bold text-[#8D493A] hover:bg-[#FCDFD3]/20 rounded-xl transition-all"
             >
               <Globe className="w-4 h-4" />
-              <span>{currentLang}</span>
+              <span className="hidden sm:inline">{currentLang}</span>
             </button>
 
             {langDropdownOpen && (
@@ -84,13 +89,14 @@ function Topbar({ userProfile, onUpdateProfile }) {
             )}
           </div>
 
-          <button className="p-2.5 text-[#6F5B55] hover:text-[#8D493A] hover:bg-[#FCDFD3]/20 rounded-full border border-[#EADBC8]/40 transition-all relative">
+          <button className="p-2 text-[#6F5B55] hover:text-[#8D493A] hover:bg-[#FCDFD3]/20 rounded-full border border-[#EADBC8]/40 transition-all relative">
             <Bell className="w-4 h-4" />
-            <span className="absolute top-2 right-2 w-1.5 h-1.5 bg-[#8D493A] rounded-full" />
+            <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-[#8D493A] rounded-full" />
           </button>
+          
           <button 
             onClick={() => setProfileModalOpen(true)}
-            className="flex items-center justify-center w-10 h-10 rounded-full bg-[#8D493A] text-white font-bold text-sm tracking-wide shadow-sm border border-[#8D493A]/20 hover:scale-105 transition-transform overflow-hidden shrink-0"
+            className="flex items-center justify-center w-9 h-9 rounded-full bg-[#8D493A] text-white font-bold text-xs tracking-wide shadow-sm border border-[#8D493A]/20 hover:scale-105 transition-transform overflow-hidden shrink-0"
           >
             {profilePic || userProfile?.avatar ? (
               <img src={profilePic || userProfile?.avatar} alt="Avatar" className="w-full h-full object-cover" />
@@ -101,6 +107,8 @@ function Topbar({ userProfile, onUpdateProfile }) {
 
         </div>
       </header>
+
+      {/* Profile Modification Backdrop Overlay Container */}
       {profileModalOpen && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 font-sans animate-in fade-in duration-200">
           <div className="bg-[#FDFBF7] border border-[#EADBC8] w-full max-w-md rounded-2xl p-6 shadow-2xl relative text-left">
@@ -129,6 +137,7 @@ function Topbar({ userProfile, onUpdateProfile }) {
                 </div>
                 <span className="text-[10px] text-[#6F5B55]/70 font-semibold uppercase tracking-wider">Change Profile Pic</span>
               </div>
+              
               <div>
                 <label className="block text-[10px] font-bold text-[#2C1A14] uppercase tracking-wider mb-1.5">Full Name</label>
                 <input 
