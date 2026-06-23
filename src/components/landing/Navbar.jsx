@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, Globe, Menu, X } from 'lucide-react';
+import Logo from '../../assets/Logo';
 
 function Navbar({ onNavigate, activeSection }) {
   const [currentLang, setCurrentLang] = useState('EN');
@@ -33,6 +34,7 @@ function Navbar({ onNavigate, activeSection }) {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         
         <div onClick={() => handleMobileNavClick('home', '#home-section')} className="flex items-center space-x-3 cursor-pointer">
+          <Logo style={{ width: 36, height: 36, minWidth:36, maxWidth:36, overflow: 'hidden', borderRadius: '50%',  display:'block' }}/>
           <span className="text-[20px] font-bold tracking-wide text-[#8D493A]">
             UmucoCore
           </span>
