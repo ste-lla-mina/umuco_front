@@ -11,6 +11,7 @@ import {
   Menu,
   X
 } from 'lucide-react';
+import Logo from '../../assets/Logo'
 
 function Sidebar({ activeTab, setActiveTab, onLogout }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +30,7 @@ function Sidebar({ activeTab, setActiveTab, onLogout }) {
 
   const handleTabClick = (id) => {
     setActiveTab(id);
-    setIsOpen(false); // Auto-close drawer on mobile view selection
+    setIsOpen(false); 
   };
 
   const renderNavItem = (item) => {
@@ -54,7 +55,6 @@ function Sidebar({ activeTab, setActiveTab, onLogout }) {
 
   return (
     <>
-      {/* Mobile Toggle Bar Header Button */}
       <div className="lg:hidden fixed top-4 left-4 z-50">
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -65,22 +65,22 @@ function Sidebar({ activeTab, setActiveTab, onLogout }) {
         </button>
       </div>
 
-      {/* Dimmed Overlay Backdrop Background for Mobile Drawer */}
       {isOpen && (
         <div 
           onClick={() => setIsOpen(false)}
           className="lg:hidden fixed inset-0 bg-[#2C1A14]/20 backdrop-blur-xs z-40 transition-opacity"
         />
       )}
-
-      {/* Navigation Sidebar Drawer */}
       <aside className={`w-64 h-screen bg-[#FDFBF7] border-r border-[#EADBC8]/60 flex flex-col justify-between py-6 px-4 font-sans shrink-0 fixed left-0 top-0 z-40 transition-transform duration-300 transform lg:translate-x-0 ${
         isOpen ? 'translate-x-0 shadow-xl' : '-translate-x-full'
       }`}>
         
         <div className="flex flex-col space-y-7 pt-12 lg:pt-0">
           <div className="px-2 py-1">
-            <h2 className="text-xl font-bold text-[#8D493A]">Umuco Core.</h2>
+            <h2 className="flex text-xl gap-1 font-bold text-[#8D493A]">
+               <Logo style={{ width: 36, height: 36, minWidth: 36, maxWidth: 36, overflow: 'hidden', borderRadius: '50%', display: 'block' }}/>
+                  <span>Umuco Core</span>
+            </h2>
             <p className="text-xs text-[#6F5B55]/70 tracking-tight">Rwanda Cultural Archive.</p>
           </div>
           <nav className="flex flex-col space-y-1">
