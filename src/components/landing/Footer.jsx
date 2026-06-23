@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from '../../assets/Logo'
 import { Share2, MessageSquare } from 'lucide-react';
 function Footer() {
   return (
@@ -8,11 +9,13 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-16 border-b border-white/10">
           
           <div className="lg:col-span-4 flex flex-col items-start text-left">
-            <h3 className="font-serif text-2xl font-bold tracking-wide text-[#FDFBF7] mb-4">
-              UmucoCore
+           <h3 className="flex items-center gap-2 font-sans text-2xl font-bold tracking-wide text-[#FDFBF7] mb-3">
+            <Logo style={{ width: 36, height: 36, minWidth: 36, maxWidth: 36, overflow: 'hidden', borderRadius: '50%', display: 'block' }}/>
+             <span>UmucoCore</span>
             </h3>
+
             <p className="text-sm text-[#A39E93] leading-relaxed max-w-sm mb-6 font-normal">
-              Connecting the world to the heart of Rwanda. Experience the depth of our 
+              Connecting the world to the heart of Rwanda. Experience roots of our 
               traditions and the spirit of our people.
             </p>
             <div className="flex items-center space-x-3">
