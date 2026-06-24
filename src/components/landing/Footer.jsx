@@ -16,7 +16,7 @@ function Footer() {
 
             <p className="text-sm text-[#A39E93] leading-relaxed max-w-sm mb-6 font-normal">
               Connecting the world to the heart of Rwanda. Experience roots of our 
-              traditions and the spirit of our people.
+              traditions and the spirit of our ancestors.
             </p>
             <div className="flex items-center space-x-3">
               <button className="w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-[#A39E93] hover:text-white transition-colors duration-200">
