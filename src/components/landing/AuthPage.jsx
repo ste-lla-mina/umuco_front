@@ -308,10 +308,10 @@ function SignUpPage({ onNavigate }) {
             <div className="w-12 h-[2px] bg-[#8D493A]/30 rounded-full mb-10" />
 
             <button
-              onClick={() => onNavigate('dashboard')}
+              onClick={() => onNavigate('login')}
               className="w-full bg-[#8D493A] hover:bg-[#3E2723] text-white py-3.5 px-6 rounded-xl font-semibold text-sm tracking-wide transition-colors duration-200 mb-3"
             >
-              Enter the Archive →
+              Login →
             </button>
             <button
               onClick={() => onNavigate('home')}
