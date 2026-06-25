@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Lock, Eye, EyeOff, Milestone, ArrowLeft, ShieldCheck } from 'lucide-react';
+import { Mail, Lock, Eye, EyeOff, Milestone, ArrowLeft, ShieldCheck,ArrowUpRight } from 'lucide-react';
 import authLeftBg from '../../assets/tra.png';
 import authLeftBg2 from '../../assets/tradi.jpg'; 
 import authLeftBg3 from '../../assets/rda.jpg';
@@ -172,92 +172,134 @@ function LoginPage({ onNavigate }) {
   return (
     <section className="w-full min-h-screen flex font-sans bg-[#FDFBF7]">
       <LeftSlideshow />
-      <div className="w-full lg:w-1/2 flex flex-col p-8 md:p-10 bg-[#FDFBF7]">
-        <div className="flex items-center justify-between w-full mb-8">
-          <button
-            onClick={() => onNavigate('home')}
-            className="inline-flex items-center space-x-2 text-xs font-semibold text-[#8D493A] hover:text-[#3E2723] transition-colors focus:outline-none"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            <span style={{ fontFamily: 'Poppins, sans-serif' }} className="font-semibold">Back to Home</span>
-          </button>
-          <div className="flex items-center space-x-1.5">
-            <TribalLogo style={{ width: 50, height: 50, display: 'block', flexShrink: 0, overflow: 'hidden', borderRadius: '50%' }} />
-          </div>
+      <div className="w-full lg:w-1/2 flex flex-col p-8 md:p-10 bg-[#FAF8F5]">
+  <div className="flex items-center justify-between w-full mb-8">
+    <button
+      onClick={() => onNavigate('home')}
+      className="inline-flex items-center space-x-2 text-xs font-semibold text-[#8D493A] hover:text-[#3E2723] transition-colors focus:outline-none"
+    >
+      <ArrowLeft className="w-4 h-4" />
+      <span style={{ fontFamily: 'Poppins, sans-serif' }} className="font-semibold">Back to Home</span>
+    </button>
+    <div className="flex items-center space-x-1.5">
+      <TribalLogo style={{ width: 50, height: 50, display: 'block', flexShrink: 0, overflow: 'hidden', borderRadius: '50%' }} />
+    </div>
+  </div>
+
+  <div className="w-full max-w-sm mx-auto my-auto">
+    {!isForgotPassword ? (
+      <>
+        <div className="text-left mb-8">
+          <h1 className="text-3xl font-bold tracking-tight text-[#8D493A] mb-2 font-sans" >Welcome back.</h1>
+          <p className="text-xs md:text-sm text-[#6F5B55]">Access your heritage gateway and continue your journey.</p>
         </div>
-        <div className="w-full max-w-sm mx-auto my-auto">
-          {!isForgotPassword ? (
-            <>
-              <div className="text-left mb-8">
-                <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-[#8D493A] mb-2">Welcome Back!</h1>
-                <p className="text-xs md:text-sm text-[#6F5B55]">Ready to access your heritage gateway.</p>
-              </div>
 
-              <form onSubmit={handleLoginSubmit} className="space-y-5">
-                <div className="relative text-left">
-                  <label className="block text-[10px] font-bold text-[#2C1A14] tracking-wider uppercase mb-1.5">Email Address</label>
-                  <div className="relative">
-                    <input type="email" name="email" value={formData.email} onChange={handleInputChange}
-                      placeholder="name@domain.com"
-                      className="w-full bg-white border border-[#EADBC8] rounded-xl pl-10 pr-4 py-2.5 text-xs text-[#2C1A14] placeholder-neutral-400 focus:outline-none focus:border-[#8D493A] transition-colors"
-                      required />
-                    <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-400"><Mail className="w-4 h-4" /></span>
-                  </div>
-                </div>
+        <form onSubmit={handleLoginSubmit} className="space-y-4">
+          <div className="relative text-left">
+            <label className="block text-[10px] font-bold text-[#2C1A14] tracking-wider uppercase mb-1.5">Email Address</label>
+            <div className="relative">
+              <input 
+                type="email" 
+                name="email" 
+                value={formData.email} 
+                onChange={handleInputChange}
+                placeholder="name@domain.com"
+                className="w-full bg-white border border-[#EADBC8]/60 rounded-xl pl-10 pr-4 py-3 text-xs text-[#2C1A14] placeholder-neutral-400/70 focus:outline-none focus:border-[#8D493A] transition-colors"
+                required 
+              />
+              <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-400"><Mail className="w-4 h-4" /></span>
+            </div>
+          </div>
 
-                <div className="relative text-left">
-                  <div className="flex items-center justify-between mb-1.5">
-                    <label className="text-[10px] font-bold text-[#2C1A14] tracking-wider uppercase">Password</label>
-                    <button type="button" onClick={() => { setIsForgotPassword(true); setVerificationStep('email'); }}
-                      className="text-[10px] font-bold text-[#8D493A] hover:underline focus:outline-none">
-                      Forgot password?
-                    </button>
-                  </div>
-                  <div className="relative">
-                    <input type={showPassword ? 'text' : 'password'} name="password" value={formData.password}
-                      onChange={handleInputChange} placeholder="••••••••"
-                      className="w-full bg-white border border-[#EADBC8] rounded-xl pl-10 pr-10 py-2.5 text-xs text-[#2C1A14] placeholder-neutral-400 focus:outline-none focus:border-[#8D493A] transition-colors"
-                      required />
-                    <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-400"><Lock className="w-4 h-4" /></span>
-                    <button type="button" onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3.5 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-neutral-600 focus:outline-none">
-                      {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-                    </button>
-                  </div>
-                </div>
+          <div className="relative text-left">
+            <div className="flex items-center justify-between mb-1.5">
+              <label className="text-[10px] font-bold text-[#2C1A14] tracking-wider uppercase">Password</label>
+              <button 
+                type="button" 
+                onClick={() => { setIsForgotPassword(true); setVerificationStep('email'); }}
+                className="text-[10px] font-bold text-[#8D493A] hover:underline focus:outline-none"
+              >
+                Forgot password?
+              </button>
+            </div>
+            <div className="relative">
+              <input 
+                type={showPassword ? 'text' : 'password'} 
+                name="password" 
+                value={formData.password}
+                onChange={handleInputChange} 
+                placeholder="••••••••"
+                className="w-full bg-white border border-[#EADBC8]/60 rounded-xl pl-10 pr-10 py-3 text-xs text-[#2C1A14] placeholder-neutral-400/70 focus:outline-none focus:border-[#8D493A] transition-colors"
+                required 
+              />
+              <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-400"><Lock className="w-4 h-4" /></span>
+              <button type="button" onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-neutral-600 focus:outline-none">
+                {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+              </button>
+            </div>
+          </div>
 
-                <label className="flex items-center space-x-2 cursor-pointer select-none pt-1">
-                  <input type="checkbox" name="rememberMe" checked={formData.rememberMe} onChange={handleInputChange}
-                    className="accent-[#8D493A] h-4 w-4 rounded border-neutral-300" />
-                  <span className="text-xs text-[#6F5B55]">Remember me for 30 days</span>
-                </label>
+          <label className="flex items-center space-x-2 cursor-pointer select-none pt-1">
+            <input 
+              type="checkbox" 
+              name="rememberMe" 
+              checked={formData.rememberMe} 
+              onChange={handleInputChange}
+              className="accent-[#8D493A] h-4 w-4 rounded border-neutral-300" 
+            />
+            <span className="text-xs text-[#6F5B55]">Remember me for 30 days</span>
+          </label>
 
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="w-full bg-[#8D493A] hover:bg-[#3E2723] disabled:opacity-70 text-white py-3 px-4 rounded-xl font-semibold text-xs tracking-widest uppercase transition-colors duration-200 mt-2 flex items-center justify-center space-x-2"
-                >
-                  {isLoading ? (
-                    <>
-                      <svg className="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/>
-                      </svg>
-                      <span>Signing In...</span>
-                    </>
-                  ) : (
-                    <span>Sign In</span>
-                  )}
-                </button>
-              </form>
+          <button
+            type="submit"
+            disabled={isLoading}
+            className="w-full bg-[#8D493A] hover:bg-[#723A2E] disabled:opacity-70 text-white py-3.5 px-4 rounded-xl font-bold text-xs tracking-widest uppercase transition-all duration-200 mt-4 flex items-center justify-center space-x-2 shadow-xs"
+          >
+            {isLoading ? (
+              <>
+                <svg className="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/>
+                </svg>
+                <span>Signing In...</span>
+              </>
+            ) : (
+              <span className="flex items-center gap-1">Login <ArrowUpRight className="w-4 h-4" /></span>
+            )}
+          </button>
+        </form>
 
-              <p className="text-xs text-[#6F5B55] mt-6">
-                Don't have an account?{' '}
-                <button onClick={() => onNavigate('signup')} className="font-bold text-[#8D493A] hover:underline bg-transparent border-none p-0 cursor-pointer">
-                  Sign Up
-                </button>
-              </p>
-            </>
+        <div className="relative flex py-5 items-center">
+          <div className="flex-grow border-t border-neutral-200"></div>
+          <span className="flex-shrink mx-4 text-neutral-400 text-[11px] font-medium">or continue with</span>
+          <div className="flex-grow border-t border-neutral-200"></div>
+        </div>
+        <div className="grid grid-cols-2 gap-3 mb-6">
+          <button type="button" className="flex items-center justify-center gap-2 border border-neutral-200 bg-white hover:bg-neutral-50 rounded-full py-2.5 text-xs font-semibold text-neutral-700 transition-colors shadow-2xs">
+            <svg className="w-4 h-4" viewBox="0 0 24 24">
+              <path fill="#EA4335" d="M12 5.04c1.64 0 3.12.56 4.28 1.67l3.2-3.2C17.52 1.64 14.96 1 12 1 7.36 1 3.4 3.68 1.48 7.6l3.8 2.96C6.24 7.4 8.88 5.04 12 5.04z"/>
+              <path fill="#4285F4" d="M23.52 12.32c0-.8-.08-1.56-.2-2.32H12v4.4h6.48c-.28 1.48-1.12 2.72-2.36 3.56l3.68 2.84c2.16-2 3.4-4.96 3.4-8.48z"/>
+              <path fill="#FBBC05" d="M5.28 14.76c-.24-.72-.36-1.48-.36-2.28s.12-1.56.36-2.28L1.48 7.24C.52 9.16 0 11.28 0 13.5s.52 4.34 1.48 6.26l3.8-3z"/>
+              <path fill="#34A853" d="M12 23c3.24 0 5.96-1.08 7.96-2.92l-3.68-2.84c-1.04.7-2.36 1.12-4.28 1.12-3.12 0-5.76-2.36-6.72-5.52l-3.8 2.96C3.4 20.32 7.36 23 12 23z"/>
+            </svg>
+            Google
+          </button>
+          <button type="button" className="flex items-center justify-center gap-2 border border-neutral-200 bg-[#161212] hover:bg-black rounded-full py-2.5 text-xs font-semibold text-white transition-colors shadow-2xs">
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.17c.65-.8 1.09-1.92.97-3.04-1 .04-2.22.67-2.94 1.52-.64.74-1.2 1.88-1.05 2.99 1.11.09 2.27-.58 3.02-1.47z"/>
+            </svg>
+            Apple
+          </button>
+        </div>
+
+        <p className="text-xs text-[#6F5B55] mt-2 text-center">
+          Don't have an account?{' '}
+          <button onClick={() => onNavigate('signup')} className="font-bold text-[#8D493A] hover:underline bg-transparent border-none p-0 cursor-pointer">
+            Sign up
+          </button>
+        </p>
+      </>
           ) : (
             <>
               <div className="text-left mb-8">
