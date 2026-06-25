@@ -1,7 +1,8 @@
 import React from 'react';
+import { useState,useEffect } from 'react';
 import { ArrowRight, History, Landmark, Music } from 'lucide-react';
 
-function DigitalArchive() {
+function DigitalArchive({onNavigate}) {
   const collections = [
     {
       title: 'Oral History',
@@ -23,7 +24,6 @@ function DigitalArchive() {
   return (
     <section className="w-full bg-[#FDFBF7] font-sans px-4 sm:px-6 lg:px-10 py-12 sm:py-16 md:py-24 border-t border-[#EADBC8]/40 scroll-mt-20">
       <div className="max-w-7xl mx-auto">
-        
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 md:mb-16 px-2 sm:px-0">
           <div className="text-left max-w-xl">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#8D493A] mb-2 sm:mb-4">
@@ -34,7 +34,7 @@ function DigitalArchive() {
             </p>
           </div>
 
-          <button className="inline-flex items-center space-x-2 text-[#8D493A] hover:text-[#3E2723] font-semibold text-xs sm:text-sm tracking-wide transition-colors duration-200 group self-start sm:self-auto shrink-0 pt-2 sm:pt-0">
+          <button onClick={() => onNavigate('signup')} className="inline-flex items-center space-x-2 text-[#8D493A] hover:text-[#3E2723] font-semibold text-xs sm:text-sm tracking-wide transition-colors duration-200 group self-start sm:self-auto shrink-0 pt-2 sm:pt-0">
             <span>View All Collections</span>
             <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transform transition-transform group-hover:translate-x-1" />
           </button>
