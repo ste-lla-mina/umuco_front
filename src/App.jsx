@@ -78,7 +78,7 @@ function App() {
         <Hero onNavigate={navigateTo} />
       </div>
       <div id="archive" className="scroll-mt-20">
-        <DigitalArchive />
+        <DigitalArchive onNavigate={navigateTo} />
       </div>
       <div id="community" className="scroll-mt-20">
         <CommunityGuardian onNavigate={navigateTo} />
