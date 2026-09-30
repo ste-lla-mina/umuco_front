@@ -447,9 +447,6 @@ function PasswordStrength({ password }) {
 
 function SignUpPage({ onNavigate }) {
   const { t } = useLanguage();
-
-  // The explorer-path picker now shows after the person confirms their
-  // email (see handleCodeSubmit), not while they're filling out the form.
   const [showExplorerModal, setShowExplorerModal] = useState(false);
   const [explorerType, setExplorerType] = useState(null);
 
@@ -466,16 +463,11 @@ function SignUpPage({ onNavigate }) {
 
   const selectedExplorer = EXPLORER_TYPES.find((type) => type.id === explorerType) || null;
   const selectedExplorerCopy = selectedExplorer ? getExplorerCopy(t, selectedExplorer.id, selectedExplorer) : null;
-
-  // Picking a path in the modal now finishes sign-up: save the choice, close
-  // the modal, and land on the success screen (which shows the pick).
   const handleExplorerContinue = (typeId) => {
     setExplorerType(typeId);
     setShowExplorerModal(false);
     setIsSuccess(true);
   };
-
-  // Skipping the picker still finishes sign-up, just without a path chosen.
   const handleExplorerSkip = () => {
     setShowExplorerModal(false);
     setIsSuccess(true);
@@ -510,9 +502,6 @@ function SignUpPage({ onNavigate }) {
     const inputs = e.target.closest('.flex')?.querySelectorAll('input');
     if (inputs && inputs[nextIndex]) inputs[nextIndex].focus();
   };
-
-  // MOCK: previously called register(formData.name, formData.email, formData.password, explorerType).
-  // Now just simulates sending a code and moves to the verification step.
   const handleSignUpSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -525,10 +514,6 @@ function SignUpPage({ onNavigate }) {
       setIsVerifying(true);
     }, 900);
   };
-
-  // MOCK: once the code is confirmed, show the explorer-path picker instead
-  // of jumping straight to the success screen. Success now happens after
-  // the person picks a path or skips (see handleExplorerContinue/Skip above).
   const handleCodeSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -832,8 +817,6 @@ function SignUpPage({ onNavigate }) {
                 <span className="flex-shrink mx-4 text-neutral-400 text-[11px] font-medium">{t('auth.orContinueWith') || 'or register with'}</span>
                 <div className="flex-grow border-t border-neutral-200"></div>
               </div>
-
-              {/* Real Google sign-in, added from the richer sign-up flow (falls back to a plain button if GoogleLogin isn't available) */}
               <div className="grid grid-cols-2 gap-3 mb-6">
                 {GoogleLogin ? (
                   <div className="col-span-2 h-[42px] flex items-center justify-center overflow-hidden rounded-full border border-neutral-200 shadow-2xs [&>div]:!w-full [&_iframe]:!w-full [&_iframe]:!h-[42px] [&_iframe]:!m-0 [&_iframe]:!border-none">
@@ -938,8 +921,6 @@ function SignUpPage({ onNavigate }) {
                   )}
                 </button>
               </form>
-
-              {/* Resend code with cooldown, added from the richer sign-up flow */}
               <p className="text-xs text-[#6F5B55] mt-5 text-center">
                 {t('auth.didntReceive') || "Didn't receive a code?"}{' '}
                 <button
