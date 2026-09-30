@@ -31,8 +31,6 @@ function Discover({ onNavigate }) {
   return (
     <section className="w-full bg-[#FAF8F5] font-sans px-4 sm:px-6 lg:px-10 py-12 sm:py-16 md:py-24 border-t border-[#EADBC8]/40 scroll-mt-20">
       <div className="max-w-7xl mx-auto">
-
-        {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-8 md:mb-12 px-2 sm:px-0">
           <div className="inline-flex items-center space-x-2 bg-[#FCDFD3]/40 border border-[#EADBC8] rounded-full px-3.5 py-1 mb-4 shadow-2xs">
             <BookOpen className="w-4 h-4 text-[#8D493A]" />
@@ -47,11 +45,7 @@ function Discover({ onNavigate }) {
             {t('discover.subtitle')}
           </p>
         </div>
-
-        {/* Featured Story Display Card */}
         <div className="story-lockup max-w-2xl md:max-w-4xl mx-auto overflow-hidden border border-[#EADBC8]/60 shadow-md bg-white rounded-3xl transition-all duration-300">
-          
-          {/* Image Header with Interactive Navigation Controls (< & >) */}
           <div className="relative h-64 sm:h-80 md:h-96 w-full group overflow-hidden bg-neutral-900">
             <img
               src={story.image}
@@ -59,8 +53,6 @@ function Discover({ onNavigate }) {
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10" />
-
-            {/* Left Chevron Button (<) */}
             <button
               type="button"
               onClick={handlePrevStory}
@@ -69,8 +61,6 @@ function Discover({ onNavigate }) {
             >
               <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 transition-transform group-hover/btn:-translate-x-0.5" />
             </button>
-
-            {/* Right Chevron Button (>) */}
             <button
               type="button"
               onClick={handleNextStory}
@@ -79,8 +69,6 @@ function Discover({ onNavigate }) {
             >
               <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 transition-transform group-hover/btn:translate-x-0.5" />
             </button>
-
-            {/* Image Overlay Title Metadata */}
             <div className="absolute inset-x-6 sm:inset-x-12 bottom-6 sm:bottom-8 text-left text-white z-10">
               <div className="flex items-center space-x-2 mb-1.5">
                 <span className="text-[10px] sm:text-xs font-black tracking-widest uppercase text-[#FCDFD3] bg-[#8D493A]/80 px-2.5 py-0.5 rounded-md backdrop-blur-xs">
@@ -92,8 +80,6 @@ function Discover({ onNavigate }) {
               </h3>
             </div>
           </div>
-
-          {/* Category & Read Time Tags */}
           <div className="flex items-center gap-3 px-5 sm:px-8 md:px-12 pt-6 text-[10px] sm:text-xs text-[#8D493A] font-bold tracking-wider uppercase">
             <span className="bg-[#FCDFD3]/40 border border-[#EADBC8] rounded-full px-3.5 py-1 text-[#8D493A]">
               {story.category}
@@ -103,8 +89,6 @@ function Discover({ onNavigate }) {
               {readMinutes} min read
             </span>
           </div>
-
-          {/* Story Body Excerpt */}
           <div className="relative px-5 sm:px-8 md:px-12 pt-5 pb-2">
             <div
               key={story.id}
@@ -122,8 +106,6 @@ function Discover({ onNavigate }) {
             </div>
             <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white via-white/95 to-transparent pointer-events-none" />
           </div>
-
-          {/* CTA Button Block */}
           <div className="flex flex-col items-center pb-8 sm:pb-10 pt-2 relative z-10">
             <button
               type="button"
