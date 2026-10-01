@@ -117,7 +117,7 @@ export const translations = {
 
     // Layout / Sidebar
     "sidebar.appName": "Umuco Core",
-    "sidebar.tagline": "Rwanda Cultural Archive",
+    "sidebar.tagline": "Rwanda Cultural Archive.",
     "sidebar.home": "Home",
     "sidebar.explore": "Explore",
     "sidebar.listen": "Listen",
